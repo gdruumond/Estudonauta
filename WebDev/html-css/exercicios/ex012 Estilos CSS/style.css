@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+body{
+    background-color: #28f96ec7;
+}
+
+main{
+    background-color: white;
+    width: 600px;
+    padding: 10px;
+    box-shadow: 5px 5px 15px #178d3fc7;
+    text-align: justify;
+    margin: auto;
+    border-radius: 10px;
+}
+
+h1, h2{
+    font-family: Poppins;
+    color: #7F17E6;
+    text-align: center;
+}
+
+p{
+    font: 1.05em Arial, sans-serif;
+}
+
+/*
+        <div>
+            LyDay
+        </div>
+        
+div{
+    font: 0.8em Pacifico; 
+    text-align: right; 
+    color: #7F17E6; 
+    text-shadow: 0.5px 0.5px 1px #28f96ec7;
+    text-align: right;
+ }
