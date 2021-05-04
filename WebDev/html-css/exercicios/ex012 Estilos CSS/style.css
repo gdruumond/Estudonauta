@@ -25,15 +25,16 @@ p{
     font: 1.05em Arial, sans-serif;
 }
 
-/*
-        <div>
-            LyDay
-        </div>
-        
 div{
-    font: 0.8em Pacifico; 
-    text-align: right; 
+    font: 0.7em Poppins;
+    color: #7F17E6;
+    margin-left: auto;
+    width: 101px;
+}
+
+span{
+    font: 1.4em Pacifico;  
     color: #7F17E6; 
     text-shadow: 0.5px 0.5px 1px #28f96ec7;
-    text-align: right;
- }
+}
+
