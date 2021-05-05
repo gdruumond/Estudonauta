@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main{
+            width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        body{
+            background-color: orange;
+        }
+
+        strong{
+            color: rgb(253, 0, 253);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Tipos Primitivos e Tratamento de Dados</h1>
+        <h2>Basicamente, temos os tipos:</h2>
+        <p><ul>
+            <li>Number: para número (podendo ser Int (inteiro) ou Float(real))</li>
+            <li>Boolean: para <strong>true</strong> ou <strong>false</strong></li>
+            <li>String: para cadeia de caracteres (Podem iniciar com ", ' ou `)</li>
+        </ul></p>
+
+        <h2>Alguns comandos da aula:</h2>
+        <h3>Para pop-up:</h3> 
+            <p><ul>
+                <li>window.alert("Texto que aparece no pop-up") pop-up simples com <strong>OK</strong></li>
+                <li>window.confirm('') pop-up com <strong>sim</strong> ou <strong>cancelar</strong></li>
+                <li>window.prompt(``) pop-up com <strong>input</strong></li>
+            </ul></p>
+        
+
+        <h3>String -> Num</h3>
+        <p><ul>
+            <li>Number.parseInt("") transformar para número inteiro</li>
+            <li>Number.parseFloat("") transformar para número real</li>
+            <li>Number("") o JavaScript identifica qual o tipo </li>
+        </ul></p>
+
+        <h3>Num -> String</h3>
+        <p><ul>
+            <li>String(num)</li>
+            <li>num.toString()</li>
+        </ul></p>
+
+        <h3>Formatação de <strong><em>number</em></strong></h3>
+        <p><ul>
+            <li>n.toFixed(2) para deixar com 2 casas decimais</li>
+            <li>n.toLocaleString('pr-BR', {style: 'currency', currency: 'USD'}) para tranformar o número em uma medida monetária de um determinado país!!</li>
+        </ul></p>
+
+        <h3>Escreva no documento</h3>
+        <p>Usando o comando document.white(''), é possível escrever o output do JS aqui no HTML, veja só:</p>
+
+        <script>
+            var nome = prompt("Digite aqui o seu nome")
+            var anos = prompt("Digite aqui a sua idade")
+            var dol = 2000
+            dolares = dol.toLocaleString('pr-BR', {style: 'currency', currency: 'USD'})
+            alert(`Você se chama ${nome.toUpperCase()}, e tem ${anos} anos!`)
+            document.write(`Você se chama ${nome.toLocaleUpperCase()} e tem ${dolares} doláres`)
+        </script>
+    </main>
+</body>
+</html>
