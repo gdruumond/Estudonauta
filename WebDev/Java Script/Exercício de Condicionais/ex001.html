@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Nacionalidade</title>
+    <style>
+        *{font-family: Arial, Helvetica, sans-serif;}
+    </style>
+</head>
+<body>
+    <h1>És brasileiro?</h1>
+    <p>Nacionalidade: <input type="text" id="nacao"><input type="button" value="Validar" id="botao" onclick="validar()"></p>
+    <div id="resultado">Resultado aqui</div>
+
+    <script>
+        function validar(){
+            var nacao = document.querySelector('input#nacao')
+            var res = document.querySelector('div#resultado')
+
+            res.innerText = 'Resultado: '
+
+            if (nacao != 'Brasil'){
+                res.innerText += 'Você é estrangeiro'
+            } else{
+                res.innerText += 'Você é brasileiro'
+            }
+        }
+    </script>
+</body>
+</html>
