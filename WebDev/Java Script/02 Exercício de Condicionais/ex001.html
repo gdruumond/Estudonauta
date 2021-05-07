@@ -16,12 +16,12 @@
 
     <script>
         function validar(){
-            var nacao = document.querySelector('input#nacao')
+            var nacao = document.querySelector('input#nacao').value
             var res = document.querySelector('div#resultado')
 
             res.innerText = 'Resultado: '
 
-            if (nacao != 'Brasil'){
+            if (nacao.toLowerCase() != 'brasil'){
                 res.innerText += 'Você é estrangeiro'
             } else{
                 res.innerText += 'Você é brasileiro'
