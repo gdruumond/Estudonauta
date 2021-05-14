@@ -12,9 +12,9 @@ void main(){
     printf("Preço (R$): ");
     scanf("%f", &precoI);
     printf("Desconto (%%): ");
-    scanf("%i", &desconto);
+    scanf("%f", &desconto);
 
-    precoF = desconto / 100;
+    precoF = precoI - (precoI * (desconto / 100));
 
-    printf("O %s custava R$%.2f, porém, com o desconto de %i, ele passará a valer R$%.2f", produto, precoI, desconto, precoF);
+    printf("O %s custava R$%.2f, porém, com o desconto de %.0f%%, ele passará a valer R$%.2f", produto, precoI, desconto, precoF);
 }
