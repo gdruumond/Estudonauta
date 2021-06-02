@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-align: justify;
+}
+
+p{
+    text-indent: 30px;
+}
+a{
+    color: #888888;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+body{
+    background-color: #dddddd;
+}
+
+main{
+    width: 900px;
+    background-color: white;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.326);
+    padding: 10px ;
+}
+
+/* CABEÇALHO */
+header#cabecalho{
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    /* colocar a logo do glass via CSS que é bem mais simples, usa o parametro no-repeat para não repetir, e o paramelho de deslocamento lateral e depois o vertial */
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+}
+header#cabecalho h1{
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.612);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+header#cabecalho h2{
+    color: #888888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px;
+}
+/* Formatação do icone que flutua */
+header#cabecalho img#icone{
+    position: absolute;
+    left: 1050px;
+    top: 70px;
+}
+
+section#corpo{
+    display: block;
+    width: 600px;
+    float: left;
+    border-right: 1px solid #606060;
+    padding-right: 20px;
+}
+
+/* INICIO DO ARTIGO */
+article header h1{
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+}
+article header h2{
+    font-size: 12pt;
+    background-color: white;
+    margin-top: 0px;
+    color: #cecece;
+}
+article header h3{
+    font-size: 8pt;
+    color: #606060;
+}
+
+article h2{
+    font-size: 12pt;
+    padding: 0px 10px;
+    color: #606060;
+    background-color: #cecece;
+    margin: 10px 0px;
+}
+
+/* TABELA */
+table{
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin: auto;
+}
+table td{
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+table td.esquerda{
+    color: white;
+    background-color: #606060;
+    vertical-align: top;
+    text-align: right;
+    font-weight: bold;
+}
+table td.direita{
+    background-color: #cecece;
+}
+table caption{
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+table span{
+    display: block;
+    float: right;
+    color: rgba(0, 0, 0, 0.496);
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+aside#lateral{
+    margin-top: 20px;
+    display: block;
+    width: 250px;
+    float: right;
+    padding: 10px;
+    background-color: #cecece;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.285);
+}
+aside#lateral h1{
+    font-size: 20pt;
+    color: #606060;
+}
+aside#lateral h2{
+    font-size: 12pt;
+    padding: 0px 10px;
+    color: #cecece;
+    background-color: #606060;
+    margin: 10px 0px;
+}
+
+footer{
+    /* limpa a configuração de float anterior para que o site volte ao normal */
+    clear: both; 
+    border-top: 1px solid #606060;
+}
+footer p{
+    text-align: center;
+}
+
+/* FORMATAÇÃO IMAGEM COM LEGENDA NO MEIO */
+figure.foto-legenda{
+    position: relative;
+    border:8px solid white;
+    box-shadow: 1px 1px 4px black;
+}
+figure.foto-legenda img{
+    width: 100%;
+    height: 100%;
+}
+/* Formatando a legenda da foto, note que o background ocupa 100% da foto ao fundo (usando position, e box-sizing) */
+figure.foto-legenda figcaption{
+    opacity: 0;
+    color: white;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.544);
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+figure.foto-legenda:hover figcaption{
+    opacity: 1;
+    transition: 1s;
+}
+
+/* MENU DE NAVEGAÇÃO */
+nav#menu{
+    display: block;
+}
+nav#menu ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    left: 700px;
+}
+nav#menu li{
+    display: inline-block;
+    background-color: #dddddd;
+    padding: 10px;
+}
+nav#menu li:hover{
+    background-color: #606060;
+    transition: 1s;
+}
+nav#menu a{
+    color: black;
+}
+nav#menu a:hover{
+    color: white;
+    text-decoration: underline;
+}
+nav#menu h1{
+    display: none;
+}
+
+img.img-dir{
+    display: block;
+    float: right;
+    margin-left: 5px;
+}
+
