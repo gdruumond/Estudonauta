@@ -1,0 +1,25 @@
+Algoritmo "semnome"
+//  
+//  
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/24/2021
+Var
+// Seção de Declarações das variáveis;
+valor, taxa, temp, prestacao : real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+escreva("Qual é o valor inicial? ")
+leia(valor)
+escreva("Qual é a taxa mensal? ")
+leia(taxa)
+escreva("Quanto tempo? (em meses)")
+leia(temp)
+
+prestacao <- valor + (valor * taxa / 100) * temp
+
+escreva("O valor total à pagar é de R$", prestacao)
+
+
+Fimalgoritmo

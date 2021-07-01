@@ -1,0 +1,25 @@
+Algoritmo "semnome"
+//  
+//  
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/24/2021
+Var
+// Seção de Declarações das variáveis;
+a, b, c : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+escreva("Primeiro valor: ")
+leia(a)
+escreva("Segundo valor: ")
+leia(b)
+
+c <- a
+a <- b
+b <- c
+
+escreva("Os valores trocados são: ", a, " e ", b)
+
+
+Fimalgoritmo

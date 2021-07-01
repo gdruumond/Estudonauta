@@ -1,0 +1,60 @@
+Algoritmo "semnome"
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/29/2021
+Var
+   // Seção de Declarações das variáveis
+   nome1, nome2, nome : caracter
+   prova11, prova12, prova13, prova21, prova22, prova23, media1, media2 : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   nome1 <- "João"
+   nome2 <- "Maria"
+   prova11 <- 6
+   prova12 <- 7
+   prova13 <- 10
+   prova21 <- 8
+   prova22 <- 9
+   prova23 <- 10
+   media1 <- (prova11 + prova12 + prova13) / 3
+   media2 <- (prova21 + prova22 + prova23) / 3
+
+   escreva("Nome do aluno: ")
+   leia(nome)
+
+   se nome = nome1 entao
+      escreval("Notas: ", prova11, ", ", prova12, ", ", prova13)
+      escreval("Média: ", media1:2:2)
+      se media1 >= 7 entao
+         escreval("Aluno aprovado")
+      senao
+         escreval("Aluno reprovado")
+      fimse
+      se (prova11 < 5) ou (prova12 < 5) ou (prova13 < 5) entao
+         escreval("Apresenta nota abaixo de 5")
+      senao
+         escreval("Nenhuma nota abaixo de 5")
+      fimse
+   senao
+      se nome = nome2 entao
+         escreval("Notas: ", prova21, ", ", prova22, ", ", prova23)
+         escreval("Média: ", media2:2:2)
+         se media2 >= 7 entao
+            escreval("Aluno aprovado")
+         senao
+            escreval("Aluno reprovado")
+         fimse
+         se (prova21 < 5) ou (prova22 < 5) ou (prova23 < 5) entao
+            escreval("Apresenta nota abaixo de 5")
+         senao
+            escreval("Nenhuma nota abaixo de 5")
+
+         fimse
+      senao
+         escreval("Aluno não encontrado no registro")
+      fimse
+   fimse
+
+Fimalgoritmo

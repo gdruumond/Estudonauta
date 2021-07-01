@@ -1,0 +1,35 @@
+Algoritmo "semnome"
+//  
+//  
+// Descrição   : Retorna latas e R$ necessários para pintar um tanque
+// Autor(a)    : Gabriel Augusto Drumond
+// Data atual  : 6/18/2021
+
+Var
+// Seção de Declarações das variáveis 
+   aCilindro, aBase, aLateral : real
+   altura, raio, comprimento : real
+   qLatas, tLitros, custo : real
+
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+escreva("Altura do tanque: ")
+leia(altura)
+escreva("Raio da circunferência do tanque: ")
+leia(raio)
+
+aBase <- pi * raio ^ 2
+comprimento <- 2 * pi * raio * altura
+aLateral <- altura * comprimento
+
+aCilindro <- aBase + aLateral
+
+tLitros <- aCilindro / 3
+qLatas <- tLitros div 5 + 1
+custo <- qLatas * 50
+
+escreval("Quantidade de latas de tinta necessarias: ", qLatas)
+escreval("Total: R$", custo)
+
+Fimalgoritmo

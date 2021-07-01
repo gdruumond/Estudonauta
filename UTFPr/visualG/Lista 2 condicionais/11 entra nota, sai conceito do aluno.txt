@@ -1,0 +1,30 @@
+Algoritmo "semnome"
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/30/2021
+Var
+   // Seção de Declarações das variáveis
+   res : caracter
+   nota : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Nota do aluno: ")
+   leia(nota)
+
+   se nota < 50 entao
+      res <- "Insuficiente"
+   senao
+      se (nota >= 50) e (nota <65) entao
+         res <- "Regular"
+      senao
+         se (nota >= 65) e (nota < 85) entao
+            res <- "Bom"
+         senao
+            res <- "Ótimo"
+         fimse
+      fimse
+   fimse
+
+   escreva("Conceito do aluno: ", res)
+Fimalgoritmo

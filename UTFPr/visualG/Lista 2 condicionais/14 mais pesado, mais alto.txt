@@ -1,0 +1,43 @@
+Algoritmo "semnome"
+//
+//
+//
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/30/2021
+Var
+   // Seção de Declarações das variáveis
+   altura1, peso1, altura2, peso2 : real
+   nome1, nome2 : caracter
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Nome: ")
+   leia(nome1)
+   escreva("Altura: ")
+   leia(altura1)
+   escreva("Peso: ")
+   leia(peso1)
+
+   escreva("Nome: ")
+   leia(nome2)
+   escreva("Altura: ")
+   leia(altura2)
+   escreva("Peso: ")
+   leia(peso2)
+
+   se altura1 > altura2 entao
+      escreval(nome1, " é o mais alto")
+   senao
+      escreval(nome2, " é o mais alto")
+   fimse
+
+   se peso1 > peso2 entao
+      escreval(nome1, " é o mais pesado")
+   senao
+      escreval(nome2, " é o mais pesado")
+   fimse
+
+Fimalgoritmo

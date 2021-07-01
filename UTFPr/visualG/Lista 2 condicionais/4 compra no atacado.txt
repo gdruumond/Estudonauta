@@ -1,0 +1,25 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   :
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/25/2021
+Var
+   // Seção de Declarações das variáveis
+   valor, quantidade, preco : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Quantidade de maças: ")
+   leia(quantidade)
+
+   se quantidade < 12 entao
+      preco <- 1.30
+   senao
+      preco <- 1
+   fimse
+
+   valor <- preco * quantidade
+   escreva("Valor total: R$", valor)
+
+Fimalgoritmo

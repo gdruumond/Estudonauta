@@ -1,0 +1,37 @@
+Algoritmo "semnome"
+//  
+//  
+// Descrição   :
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/25/2021
+Var
+// Seção de Declarações das variáveis 
+nConta, operacao : inteiro
+saldo, nSaldo, valor : real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+escreva("Número da conta")
+leia(nConta)
+escreva("Saldo atual:")
+leia(saldo)
+escreva("[1] Deposito [2] Retirada")
+leia(operacao)
+escreva("Valor da operação")
+leia(valor)
+
+se operacao = 1 entao
+   nSaldo <- saldo + valor
+fimse
+
+se operacao = 2 entao
+   nSaldo <- saldo - valor
+fimse
+
+escreva("Saldo atual: ", nSaldo)
+
+se nSaldo < 0 entao
+   escreva("Conta estourada")
+fimse
+
+Fimalgoritmo

@@ -1,0 +1,22 @@
+Algoritmo "semnome"
+//  
+//  
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/24/2021
+Var
+// Seção de Declarações das variáveis;
+evento, horas, minutos, segundos : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+escreva("Segundos: ")
+leia(evento)
+
+horas <- evento div 3600
+minutos <- (evento mod 3600) div 60
+segundos <- (evento mod 3600) mod 60
+
+escreva(horas, " horas, ", minutos, " minutos e ", segundos, " segundos")
+
+Fimalgoritmo

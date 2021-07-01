@@ -1,0 +1,24 @@
+Algoritmo "semnome"
+//  
+//  
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/24/2021
+Var
+// Seção de Declarações das variáveis;
+volume, comprimento, largura, altura : real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+escreva("Informe o comprimento da caixa: ")
+leia(comprimento)
+escreva("Informe a largura da caixa: ")
+leia(largura)
+escreva("Informe a altura da caixa: ")
+leia(altura)
+
+volume <- comprimento * largura * altura
+
+escreva("O volume da caixa é: ", volume)
+
+Fimalgoritmo

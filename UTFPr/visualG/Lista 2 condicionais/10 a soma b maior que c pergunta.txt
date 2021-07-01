@@ -1,0 +1,29 @@
+Algoritmo "semnome"
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/30/2021
+Var
+   // Seção de Declarações das variáveis
+   res : caracter
+   a, b, c, soma : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Escreva 3 valores: ")
+   leia(a, b, c)
+
+   soma <- a + b
+
+   se soma > c entao
+      res <- ", que é maior que C
+   senao
+      se soma < c entao
+         res <- ", que é menor que C
+      senao
+         res <- ", que é igual à C
+      fimse
+   fimse
+
+   escreva("A soma de A com B, resulta em ", soma, res, " (", c, " )")
+Fimalgoritmo

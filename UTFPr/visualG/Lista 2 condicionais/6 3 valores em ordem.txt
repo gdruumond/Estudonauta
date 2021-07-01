@@ -1,0 +1,53 @@
+Algoritmo "semnome"
+//
+// Descrição   :
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/25/2021
+Var
+   // Seção de Declarações das variáveis
+   n1, n2, n3, maior, meio, menor : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Digite tres numeros: ")
+   leia(n1, n2, n3)
+
+   se n1 > n2 entao
+      se n1 > n3 entao
+         se n2 > n3 entao
+            maior <- n1
+            meio <- n2
+            menor <- n3
+         senao
+            maior <- n1
+            meio <- n3
+            menor <- n2
+         fimse
+      senao
+         se n3 > n2 entao
+            maior <- n3
+            meio <- n1
+            menor <- n2
+         fimse
+      fimse
+   senao
+      se n2 > n3 entao
+         se n1 > n3 entao
+            maior <- n2
+            meio <- n1
+            menor <- n3
+         senao
+            maior <- n2
+            meio <- n3
+            menor <- n1
+         fimse
+      senao
+         maior <- n3
+         meio <- n2
+         menor <- n1
+      fimse
+   fimse
+
+   escreva("Os valores em ordem são: ", menor, ", ", meio, ", ", maior)
+
+Fimalgoritmo

@@ -1,0 +1,29 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   :
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/25/2021
+Var
+   // Seção de Declarações das variáveis
+   n : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Digite um número: ")
+   leia(n)
+
+   se n <= 10 entao
+      escreva("F1")
+   fimse
+
+   se (n > 10) e (n <= 100) entao
+      escreva("F2")
+   fimse
+
+   se n > 100 entao
+      escreva("F3")
+   fimse
+
+
+Fimalgoritmo

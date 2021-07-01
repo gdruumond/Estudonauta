@@ -1,0 +1,23 @@
+Algoritmo "semnome"
+//  
+//  
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/24/2021
+Var
+// Seção de Declarações das variáveis;
+distancia, litros, consumo : real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+escreva("Distancia percorrida: ")
+leia(distancia)
+escreva("Litros consumidos: ")
+leia(litros)
+
+consumo <- distancia / litros
+
+escreva("O consumo é de", consumo, " Km/L")
+
+
+Fimalgoritmo

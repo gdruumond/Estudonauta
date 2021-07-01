@@ -1,0 +1,20 @@
+Algoritmo "semnome"
+//  
+//  
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/24/2021
+Var
+// Seção de Declarações das variáveis 
+vDias, anos, meses, dias : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+escreva("Quantos dias você tem? ")
+leia(vDias)
+anos <- vDias div 365
+meses <- (vDias mod 365) div 30
+dias <- (vDias mod 365) mod 30
+escreva("Você tem ", anos," anos, ", meses, " meses e ", dias, " dias")
+
+Fimalgoritmo

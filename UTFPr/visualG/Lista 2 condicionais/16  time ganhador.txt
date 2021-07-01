@@ -1,0 +1,35 @@
+
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/30/2021
+Var
+   // Seção de Declarações das variáveis
+   gol1, gol2 : real
+   time1, time2 : caracter
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Nome do time: ")
+   leia(time1)
+   escreva("Gols do time ", time1, ": ")
+   leia(gol1)
+
+   escreva("Nome do time: ")
+   leia(time2)
+   escreva("Gols do time ", time2, ": ")
+   leia(gol2)
+
+   se gol1 > gol2 entao
+      escreva("O ", time1, " ganhou a partida")
+   senao
+      se gol2 > gol1 entao
+         escreva("O ", time2, " ganhou a partida")
+      senao
+         escreva("EMPATE")
+      fimse
+   fimse
+
+
+Fimalgoritmo

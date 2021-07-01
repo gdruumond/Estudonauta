@@ -1,0 +1,30 @@
+Algoritmo "semnome"
+//  
+//  
+// Descrição   :
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/25/2021
+Var
+// Seção de Declarações das variáveis 
+altura, ideal : real
+sexo : caracter
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+escreva("Altura: ")
+leia(altura)
+escreva("Sexo [M] ou [F]: ")
+leia(sexo)
+
+se sexo = "M" entao
+   ideal <- 72.7 * altura - 58
+fimse
+
+se sexo = "F" entao
+   ideal <- 62.1 * altura - 44.7
+fimse
+
+escreva("O seu peso ideal é de ", ideal, "kg")
+
+
+Fimalgoritmo

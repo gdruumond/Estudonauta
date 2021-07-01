@@ -1,0 +1,20 @@
+Algoritmo "semnome"
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/30/2021
+Var
+   // Seção de Declarações das variáveis
+   a, b : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Insira dois valores: ")
+   leia(a, b)
+
+   se a mod b = 0 entao
+      escreva(a, " e ", b, " são multiplos")
+   senao
+      escreva(a, " e ", b, " não são multiplos")
+   fimse
+
+Fimalgoritmo

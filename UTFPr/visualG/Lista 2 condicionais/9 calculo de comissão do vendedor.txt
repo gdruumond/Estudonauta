@@ -1,0 +1,30 @@
+Algoritmo "semnome"
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 6/30/2021
+Var
+   // Seção de Declarações das variáveis
+   nome : caracter
+   tVendas, tComissao : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Nome do vendedor: ")
+   leia(nome)
+   escreva("Total de vendas em reais: ")
+   leia(tVendas)
+
+   se tVendas > 50000 entao
+      tComissao <- tVendas * 0.12
+   senao
+      se (tVendas >= 30000) e (tVendas <= 50000) entao
+         tComissao <- tVendas * 0.095
+      senao
+         tComissao <- tVendas * 0.07
+      fimse
+   fimse
+
+   escreval("Até o momento, o total de vendas da empresa é de: R$", tVendas)
+   escreva(nome, " vendeu R$", tVendas, ". Receberá R$ ", tComissao, " de comissão")
+Fimalgoritmo
