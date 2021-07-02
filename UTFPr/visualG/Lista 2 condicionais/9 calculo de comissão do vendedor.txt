@@ -18,7 +18,7 @@ Inicio
    se tVendas > 50000 entao
       tComissao <- tVendas * 0.12
    senao
-      se (tVendas >= 30000) e (tVendas <= 50000) entao
+      se (tVendas >= 30000) entao
          tComissao <- tVendas * 0.095
       senao
          tComissao <- tVendas * 0.07

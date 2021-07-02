@@ -1,0 +1,33 @@
+Algoritmo "semnome"
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/1/2021
+Var
+   // Seção de Declarações das variáveis
+   cod : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Código do produto: ")
+   leia(cod)
+
+   escolha cod
+   caso 1
+      escreva("Alimento não-perecível")
+   caso 2
+      escreva("Alimento perecível")
+   caso 3
+      escreva("Alimento vestuário")
+   caso 4
+      escreva("Alimento higiene")
+   caso 5
+      escreva("Alimento limpeza")
+   caso 6
+      escreva("Alimento utensílios")
+   outrocaso
+      escreva("Código inválido")
+   fimescolha
+
+
+Fimalgoritmo

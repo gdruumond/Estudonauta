@@ -1,0 +1,28 @@
+Algoritmo "semnome"
+//
+
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/1/2021
+Var
+   // Seção de Declarações das variáveis
+   anoNas, idade : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Ano de nascimento: ")
+   leia(anoNas)
+
+   idade <- 2021 - anoNas
+
+   se idade >= 16 entao
+   escreval(idade, " anos")
+      escreval("Tem idade para votar")
+      se idade >= 18 entao
+         escreval("Tem idade para tirar carteira")
+      fimse
+   senao
+      escreval("Não tem idade nem para votar, nem para dirigir")
+   fimse
+
+Fimalgoritmo

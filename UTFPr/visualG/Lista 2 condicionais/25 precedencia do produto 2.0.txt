@@ -1,0 +1,42 @@
+Algoritmo "semnome"
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/1/2021
+Var
+   // Seção de Declarações das variáveis
+   cod, preco : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Preço do produto: R$")
+   leia(preco)
+   escreva("Código do produto: ")
+   leia(cod)
+
+   escreval("Preço do produto: R$", preco)
+   escreva("Precedência do produto: ")
+
+   escolha cod
+   caso 1
+      escreva("Sul")
+   caso 2
+      escreva("Norte")
+   caso 3
+      escreva("Leste")
+   caso 4
+      escreva("Oeste")
+   caso 5, 6
+      escreva("Nordeste")
+   caso 7 ate 9
+      escreva("Sudeste")
+   caso 10 ate 20
+      escreva("Centro-Oeste")
+   caso 25 ate 30
+      escreva("Noroeste")
+   outrocaso
+      escreva("Importado")
+   fimescolha
+
+
+Fimalgoritmo
