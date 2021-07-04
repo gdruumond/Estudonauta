@@ -1,0 +1,35 @@
+Algoritmo "semnome"
+//
+
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/2/2021
+Var
+   // Seção de Declarações das variáveis
+   qtd, preco : real
+   nome : caracter
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Produto: ")
+   leia(nome)
+   escreva("Quantidade adquirida: ")
+   leia(qtd)
+   escreva("Preço unitário: ")
+   leia(preco)
+
+   se qtd <= 5 entao
+      preco <- preco * 0.98
+      preco <- preco * qtd
+   fimse
+   se (qtd > 5) e (qtd <= 10) entao
+      preco <- preco * 0.97
+      preco <- preco * qtd
+   fimse
+   se qtd > 10 entao
+      preco <- preco * 0.95
+      preco <- preco * qtd
+   fimse
+   
+   escreva("A pagar: R$", preco)
+Fimalgoritmo

@@ -1,0 +1,32 @@
+Algoritmo "semnome"
+//
+
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/2/2021
+Var
+   // Seção de Declarações das variáveis
+   eleitores, votos : real
+   nome : caracter
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Cidade: ")
+   leia(nome)
+   escreva("Eleitores aptos: ")
+   leia(eleitores)
+   escreva("Número de votos do canditado mais votado: ")
+   leia(votos)
+
+   se eleitores >= 20000 entao
+      se votos < eleitores * 0.5 entao
+         escreva("Município apto ao segundo turno")
+      senao
+         escreva("Município não está apto ao segundo turno")
+      fimse
+   senao
+      escreva("Município não está apto ao segundo turno")
+   fimse
+
+
+Fimalgoritmo

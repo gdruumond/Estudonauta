@@ -1,0 +1,31 @@
+Algoritmo "semnome"
+//
+
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/2/2021
+Var
+   // Seção de Declarações das variáveis
+   idade : real
+
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Idade: ")
+   leia(idade)
+   
+   escolha idade
+   caso 5 ate 7
+      escreva("Juvenil A")
+   caso 8 ate 10
+      escreva("Juvenil B")
+   caso 11 ate 13
+      escreva("Juvenil A")
+   caso 14 ate 17
+      escreva("Juvenil B")
+   outrocaso
+      escreva("Adulto")
+   fimescolha
+
+
+Fimalgoritmo
