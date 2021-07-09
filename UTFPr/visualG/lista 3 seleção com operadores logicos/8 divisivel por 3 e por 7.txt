@@ -1,0 +1,27 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/8/2021
+Var
+   // Seção de Declarações das variáveis
+   num, resto, quociente : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Escreva um número: ")
+   leia(num)
+
+   quociente <- num div 3
+   resto <- num mod 3
+
+   escreval("Resto: ", resto, ". Quociente: ", quociente)
+
+   se (num mod 3 = 0) e (num mod 7 = 0) entao
+      escreval("Número divisível por 3 e por 7")
+   senao
+      escreval("Número não é divisível por 3 e por 7)
+   fimse
+
+Fimalgoritmo

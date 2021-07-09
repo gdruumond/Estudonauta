@@ -3,27 +3,7 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro req, r1, r2, r3, iT, i1, i2, i3, uT, u1, u2, u3, p1, p2, p3, i, o
-
-		i = 0
-		o = 0
-		r1 = 0
-		r2 = 0
-		req = 0
-		r1 = 0 
-		r2 = 0 
-		r3 = 0
-		iT = 0 
-		i1 = 0
-		i2 = 0 
-		i3 = 0 
-		uT = 0 
-		u1 = 0 
-		u2 = 0 
-		u3 = 0 
-		p1 = 0 
-		p2 = 0 
-		p3 = 0
+		inteiro req = 0, r1 = 0, r2 = 0, r3 = 0, iT = 0, i1 = 0, i2 = 0, i3 = 0, uT = 0, u1 = 0, u2 = 0, u3 = 0, p1 = 0, p2 = 0, p3 = 0, i = 0, o = 0
 
 		// Validação r1
 		faca{
@@ -124,10 +104,10 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1937; 
- * @DOBRAMENTO-CODIGO = [28, 56, 85];
+ * @POSICAO-CURSOR = 181; 
+ * @DOBRAMENTO-CODIGO = [8, 36, 65];
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {i, 6, 71, 1};
+ * @SIMBOLOS-INSPECIONADOS = {i, 6, 131, 1};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */

@@ -1,0 +1,43 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/8/2021
+Var
+   // Seção de Declarações das variáveis
+   kgTot, kgmaca, kgmorango, precomaca, precomorango, precoTot : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Quantidade em Kg de maça: ")
+   leia(kgmaca)
+   escreva("Quantidade em Kg de morango: ")
+   leia(kgmorango)
+
+
+   se kgmorango <= 5 entao
+      precomorango <- 2.5
+   senao
+      precomorango <- 2.2
+   fimse
+
+   se kgmaca <= 5 entao
+      precomaca <- 1.8
+   senao
+      precomaca <- 1.5
+   fimse
+
+
+   kgTot <- kgmaca + kgmorango
+   precoTot <- kgmaca * precomaca + kgmorango * precomorango
+
+
+   se (kgTot >= 8) ou (precoTot > 25) entao
+      precoTot <- precoTot * 0.75
+   fimse
+
+
+   escreva("Valor total a ser pago: ", precoTot)
+
+Fimalgoritmo
