@@ -1,0 +1,33 @@
+Algoritmo "semnome"
+//
+
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/9/2021
+Var
+   // Seção de Declarações das variáveis
+   num : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreval("101 - Resto da Divisão")
+   escreval("102 - A metade do número")
+   escreval("103 - 10% do número")
+   escreval("104 - Dobro do número")
+
+   escreval("Escreva o número respectivo a opção escolhida: ")
+   leia(num)
+
+   escolha num
+   caso 101
+      escreva("Resto")
+   caso 102
+      escreva("Metade")
+   caso 103
+      escreva("10%")
+   caso 104
+      escreva("Dobro")
+   fimescolha
+
+
+Fimalgoritmo

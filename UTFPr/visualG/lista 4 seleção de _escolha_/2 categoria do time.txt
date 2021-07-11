@@ -1,0 +1,31 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/9/2021
+Var
+   // Seção de Declarações das variáveis
+   idade : inteiro
+   nome, categoria : caracter
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Nome: ")
+   leia(nome)
+   escreva("Idade: ")
+   leia(idade)
+
+   escolha idade
+   caso 5 ate 10
+      categoria <- "Infantil"
+   caso 11 ate 15
+      categoria <- "Juvenil"
+   caso 16 ate 20
+      categoria <- "Junior"
+   caso 21 ate 25
+      categoria <- "Profissional"
+   fimescolha
+
+
+   escreva(nome, " você é categoria ", categoria)
+Fimalgoritmo

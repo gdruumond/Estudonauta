@@ -1,0 +1,39 @@
+Algoritmo "semnome"
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/9/2021
+Var
+   // Seção de Declarações das variáveis
+   n1, n2, res, operacao : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreval("Digite dois valores: ")
+   leia(n1, n2)
+   escreval("------------------------")
+   escreval("[1] Soma")
+   escreval("[2] Subtração")
+   escreval("[3] Multiplicação")
+   escreval("[4] Divisão")
+   escreval("[5] Potência")
+   escreval("------------------------")
+   escreval("Operação matemática: ")
+   leia(operacao)
+
+   escolha operacao
+   caso 1
+      res <- n1 + n2
+   caso 2
+      res <- n1 - n2
+   caso 3
+      res <- n1 * n2
+   caso 4
+      res <- n1 / n2
+   caso 5
+      res <- n1 ^ n2
+   fimescolha
+
+   escreva("Resultado: ", res)
+
+Fimalgoritmo

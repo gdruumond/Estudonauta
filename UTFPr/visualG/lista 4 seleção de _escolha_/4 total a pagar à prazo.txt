@@ -1,0 +1,43 @@
+Algoritmo "semnome"
+//
+
+   // Descrição   : Aqui você descreve o que o programa faz! (função)
+   // Autor(a)    : Nome do(a) aluno(a)
+   // Data atual  : 7/9/2021
+Var
+   // Seção de Declarações das variáveis
+   venda, pagamento, total : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreval("Valor da venda: ")
+   leia(venda)
+   escreval("------------------------")
+   escreval("[1] Venda a vista")
+   escreval("[2] Venda a Prazo 30 dias")
+   escreval("[3] Venda a Prazo 60 dias")
+   escreval("[4] Venda a Prazo 90 dias")
+   escreval("[5] Venda no cartão de débito")
+   escreval("[6] Venda no cartão de crédito")
+   escreval("------------------------")
+   escreval("Condição de pagamento: ")
+   leia(pagamento)
+
+   escolha pagamento
+   caso 1
+      total <- venda * 0.9
+   caso 2
+      total <- venda * 0.95
+   caso 3
+      total <- venda
+   caso 4
+      total <- venda * 1.05
+   caso 5
+      total <- venda * 0.92
+   caso 6
+      total <- venda * 0.93
+   fimescolha
+
+   escreva("Total a pagar: R$", total)
+
+Fimalgoritmos
