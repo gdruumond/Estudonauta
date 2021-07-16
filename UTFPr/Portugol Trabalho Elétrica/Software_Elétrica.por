@@ -1,8 +1,11 @@
 programa
 {
+	
+	inclua biblioteca Tipos --> t
 	inclua biblioteca Matematica --> m
+	
 	real req = 0.0, r1 = 0.0, r2 = 0.0, r3 = 0.0, iT = 0.0, i1 = 0.0, i2 = 0.0, i3 = 0.0, uT = 0.0, u1 = 0.0, u2 = 0.0, u3 = 0.0, p1 = 0.0, p2 = 0.0, p3 = 0.0
-	inteiro i = 0, o = 0, c= 0, num = 0
+	inteiro i = 0, o = 0, c= 0, a = 0, num = 0
 	cadeia circuito = "", ampere1 = " A", ampere2 = " A", ampere3 = " A", wats1 = " W", wats2 = " W", wats3 = " W"
 	
 	funcao fserie(){
@@ -115,60 +118,83 @@ programa
 			escreva(">>> Digite um valor abaixo de 10000 >>>")
 			o = 0
 		}
+		se (a == 1){
+			escreva(">>> Digite um número inteiro >>>")
+			a = 0
+		}
+		
 		escreva("\nValor da 1º resistência em ohms: ")
 		leia(r1)
+		
 		se (r1 <= 0){
 			i++
 			limpa()
 		} senao se (r1 >= 10000){
 			o++
 			limpa()
+		} senao se (t.real_para_inteiro(r1) != r1){
+			a++
+			limpa()
 		} senao c = 0
 		limpa()
-		} enquanto(r1 <= 0 ou r1 >= 10000)
+		} enquanto(r1 <= 0 ou r1 >= 10000 ou t.real_para_inteiro(r1) != r1)
 
 		// Validação r2
 		faca{
-		se (i > 0){
+		se (i == 1){
 			escreva("\nValor da 1º resistência: ", r1, " Ω\n")
 			escreva(">>> Digite um valor não nulo positivo >>>")
 			i = 0
 		}
-		se (o > 0){
+		se (o == 1){
 			escreva("\nValor da 1º resistência: ", r1, " Ω\n")
 			escreva(">>> Digite um valor abaixo de 10000 >>>")
 			o = 0
+		}
+		se (a == 1){
+			escreva("\nValor da 1º resistência: ", r1, " Ω\n")
+			escreva(">>> Digite um número inteiro >>>")
+			a = 0
 		}
 		se (c == 0){
 			escreva("\nValor da 1º resistência: ", r1, " Ω\n")
 			c++
 		}
+		
 		escreva("\nValor da 2º resistência em ohms: ")
 		leia(r2)
+		
 		se (r2 <= 0){
 			i++
 			limpa()
 		} senao se (r2 >= 10000){
 			o++
 			limpa()
+		} senao se (t.real_para_inteiro(r2) != r2){
+			a++
+			limpa()
 		} senao c = 0
 		limpa()		
-		} enquanto(r2 <= 0 ou r2 >= 10000)
+		} enquanto(r2 <= 0 ou r2 >= 10000 ou t.real_para_inteiro(r2) != r2)
 
 		// Validação r3
 		faca{
-		se (i > 0){
+		se (i == 1){
 			escreva("\nValor da 1º resistência: ", r1, " Ω\n")
 			escreva("\nValor da 2º resistência: ", r2, " Ω\n")
 			escreva(">>> Digite um valor não nulo positivo >>>")
-			i++
 			i = 0
 		}
-		se (o > 0){
+		se (o == 1){
 			escreva("\nValor da 1º resistência: ", r1, " Ω\n")
 			escreva("\nValor da 2º resistência: ", r2, " Ω\n")
 			escreva(">>> Digite um valor abaixo de 10000 >>>")
-			o++
+			o = 0
+		}
+		se (a == 1){
+			escreva("\nValor da 1º resistência: ", r1, " Ω\n")
+			escreva("\nValor da 2º resistência: ", r2, " Ω\n")
+			escreva(">>> Digite um número inteiro >>>")
 			o = 0
 		}
 		se (c == 0){
@@ -176,6 +202,7 @@ programa
 			escreva("\nValor da 2º resistência: ", r2, " Ω\n")
 			c++
 		}
+		
 		escreva("\nValor da 3º resistência em ohms: ")
 		leia(r3)
 		
@@ -185,25 +212,35 @@ programa
 		} senao se (r3 >= 10000){
 			o++
 			limpa()
+		} senao se (t.real_para_inteiro(r3) != r3){
+			a++
+			limpa()
 		} senao c = 0
 		limpa()
-		} enquanto(r3 <= 0 ou r3 > 10000)
+		} enquanto(r3 <= 0 ou r3 > 10000 ou t.real_para_inteiro(r3) != r3)
 	
 		// Validação ddp
 		faca{
-		se (i > 0){
+		se (i == 1){
 			escreva("\nValor da 1º resistência: ", r1, " Ω\n")
 			escreva("\nValor da 2º resistência: ", r2, " Ω\n")
 			escreva("\nValor da 2º resistência: ", r3, " Ω\n")
 			escreva(">>> Digite um valor não nulo positivo >>>")
 			i = 0
 		}
-		se (o > 0){
+		se (o == 1){
 			escreva("\nValor da 1º resistência: ", r1, "Ω\n")
 			escreva("\nValor da 2º resistência: ", r2, "Ω\n")
 			escreva("\nValor da 3º resistência: ", r3, "Ω\n")
 			escreva(">>> Digite um valor abaixo de 12 >>>")
 			o = 0
+		}
+		se (a == 1){
+			escreva("\nValor da 1º resistência: ", r1, "Ω\n")
+			escreva("\nValor da 2º resistência: ", r2, "Ω\n")
+			escreva("\nValor da 3º resistência: ", r3, "Ω\n")
+			escreva(">>> Digite um número inteiro >>>")
+			a = 0
 		}
 		se (c == 0){
 		escreva("\nValor da 1º resistência: ", r1, " Ω\n")
@@ -211,6 +248,7 @@ programa
 		escreva("\nValor da 3º resistência: ", r3, " Ω\n")
 		c++
 		}
+		
 		escreva("\nValor da tensão em volts: ")
 		leia(uT)
 		
@@ -220,8 +258,11 @@ programa
 		} senao se (uT > 12){
 			o++
 			limpa()
-		} senao limpa()
-		} enquanto(uT <= 0 ou uT > 12)
+		} senao se (t.real_para_inteiro(uT) != uT){
+			a++
+			limpa()
+		} senao c = 0
+		} enquanto(uT <= 0 ou uT > 12 ou t.real_para_inteiro(uT) != uT)
 		
 		// Mostra a tabela de seleção do circuito
 		faca{
@@ -235,7 +276,7 @@ programa
 			escreva("\n[3] Resistores misto 1")
 			escreva("\n[4] Resistores misto 2")
 			escreva("\n=============================\n\n")
-
+			
 			se (i == 1){
 				escreva(">>> Opção inválida >>>")
 			}
@@ -268,8 +309,6 @@ programa
 				circuito = "de forma mista 2"
 				fmistodois()
 				pare
-		
-			
 		}
 		
 		// Saída de valores para o usuário
@@ -304,8 +343,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1652; 
- * @DOBRAMENTO-CODIGO = [7, 23, 108, 150, 130, 158, 192, 226, 253];
+ * @POSICAO-CURSOR = 1711; 
+ * @DOBRAMENTO-CODIGO = [10, 26, 42, 60, 79, 111, 142, 180, 222, 267, 294, 314];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

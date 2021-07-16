@@ -1,0 +1,21 @@
+Algoritmo "semnome"
+//  
+//  
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/15/2021
+Var
+// Seção de Declarações das variáveis 
+cont, soma : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+cont <- 86
+soma <- 0
+enquanto cont <= 907 faca
+         soma <- soma + cont
+         cont <- cont + 2
+fimenquanto
+escreva("A soma dos números entre 85 e 906: ", soma)
+
+Fimalgoritmo

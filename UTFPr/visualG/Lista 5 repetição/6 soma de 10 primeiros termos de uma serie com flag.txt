@@ -1,0 +1,35 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/15/2021
+Var
+   // Seção de Declarações das variáveis
+   cont, den : inteiro
+   serie : real
+   flag : caracter
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   cont <- 1
+   den <- 500
+   flag <- "+"
+   serie <- 0
+
+   enquanto cont <= 10 faca
+      escolha flag
+      caso "+"
+         serie <- serie + 2 / den
+         flag <- "-"
+      caso "-"
+         serie <- serie - 5 / den
+         flag <-  "+"
+      fimescolha
+      den <- den - 50
+      cont <- cont + 1
+   fimenquanto
+   escreva("Resultado da série: ", serie)
+
+
+Fimalgoritmo

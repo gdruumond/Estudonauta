@@ -1,0 +1,24 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/15/2021
+Var
+   // Seção de Declarações das variáveis
+   cont, soma, num : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   cont <- 1
+   soma <- 0
+   escreva("Escreva um número: ")
+   leia(num)
+   enquanto (cont <= num) faca
+            escreva(" + ", cont)
+            soma <- soma + cont
+            cont <- cont + 1
+   fimenquanto
+   escreva(" = ", soma)
+      
+Fimalgoritmo
