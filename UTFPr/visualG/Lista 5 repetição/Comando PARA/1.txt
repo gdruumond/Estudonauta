@@ -1,0 +1,18 @@
+Algoritmo "semnome"
+//  
+//  
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/16/2021
+Var
+// Seção de Declarações das variáveis 
+c, soma : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+para c <- 85 ate 907 faca
+     soma <- soma + c
+fimpara
+escreva("Soma: ", soma)
+
+Fimalgoritmo

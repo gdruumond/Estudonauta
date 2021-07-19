@@ -1,0 +1,20 @@
+Algoritmo "semnome"
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/16/2021
+Var
+   // Seção de Declarações das variáveis
+   h, c: real
+   i : inteiro
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   c <- 1
+
+   para i <- 1 ate 50 faca
+      h <- h + c / i
+      c <- c + 2
+   fimpara
+   escreva(h)
+
+Fimalgoritmo

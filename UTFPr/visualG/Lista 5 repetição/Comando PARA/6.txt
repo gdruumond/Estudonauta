@@ -1,0 +1,28 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/16/2021
+Var
+   // Seção de Declarações das variáveis
+   num, serie : real
+   den : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   num <- 2
+   serie <- 0
+
+   para den <- 500 ate 50 passo -50 faca
+      se num = 2 entao
+         serie <- serie + num / den
+         num <- 5
+      senao
+         serie <- serie - num / den
+         num <- 2
+      fimse
+   fimpara
+   escreva(serie)
+
+Fimalgoritmo
