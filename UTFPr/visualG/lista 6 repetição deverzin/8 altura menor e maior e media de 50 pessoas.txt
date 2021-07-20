@@ -1,0 +1,53 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/19/2021
+Var
+   // Seção de Declarações das variáveis
+   c, altura, menor, maior, h, m : inteiro
+   sexo : caracter
+   somamulheres, somahomens, mediamulheres, mediahomens : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+
+   para c <- 1 ate 50 faca
+
+      escreva("Sexo [M/F]: ")
+      leia(sexo)
+      escreva("Altura, em centimetros: ")
+      leia(altura)
+
+      se c = 1 entao
+         menor <- altura
+         maior <- altura
+      senao
+         se altura < menor entao
+            menor <- altura
+         fimse
+         se altura > maior entao
+            maior <- altura
+         fimse
+      fimse
+
+      se sexo = "F" entao
+         somamulheres <- somamulheres + altura
+         m <- m + 1
+      fimse
+      se sexo = "M" entao
+         somahomens <- somahomens + altura
+         h <- h + 1
+      fimse
+   fimpara
+
+   mediahomens <- somahomens / h
+   mediamulheres <- somamulheres / m
+
+   escreva("Maior do grupo: ", maior)
+   escreval("Menor do grupo: ", menor)
+   escreval("Média de altura dos homens: ", mediahomens)
+   escreval("Média de altura das mulheres: ", mediamulheres)
+
+Fimalgoritmo

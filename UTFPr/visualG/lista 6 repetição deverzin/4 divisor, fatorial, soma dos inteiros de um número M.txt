@@ -1,0 +1,41 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/20/2021
+Var
+   // Seção de Declarações das variáveis
+   num, c, fat, divisor, soma : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   fat <- 1
+
+   enquanto num >= 0 faca
+      escreva("Escreva um número: ")
+      leia(num)
+
+      se num mod 2 = 0 entao
+         para c <- 1 ate num faca
+            se (num mod c = 0) entao
+               divisor <- divisor + 1
+            fimse
+         fimpara
+         escreval(num, " tem ", divisor, " divisores.")
+      senao
+         se num < 10 entao
+            para c <- 1 ate num faca
+               fat <- fat * c
+            fimpara
+            escreval("Fatorial de ", num, " = ", fat)
+         senao
+            para c <- 1 ate num faca
+               soma <- soma + c
+            fimpara
+            escreval("Soma dos inteiros de 1 até ", num, " = ", soma)
+         fimse
+      fimse
+
+   fimenquanto
+Fimalgoritmo

@@ -1,0 +1,53 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/20/2021
+Var
+   // Seção de Declarações das variáveis
+   salariotot, salario, c, idade, m100, velho, novo : real
+   sexo : caracter
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+
+   c <- 0
+
+   enquanto (idade >= 0) faca
+
+      escreva("Sexo [M/F]: ")
+      leia(sexo)
+      escreva("Idade: ")
+      leia(idade)
+      escreva("Salário: R$")
+      leia(salario)
+
+      salariotot <- salariotot + salario
+
+      se c = 0 entao
+         velho <- idade
+         novo <- idade
+      senao
+         se idade > velho entao
+            velho <- idade
+         fimse
+         se idade < novo entao
+            novo <- idade
+         fimse
+      fimse
+                          A
+      c <- c + 1
+
+      se sexo = "F" entao
+         se salario < 100 entao
+            m100 <- m100 + 1
+         fimse
+      fimse
+   fimenquanto
+
+   escreval("Média de salário do grupo: ", salariotot / c)
+   escreval("Maior e menor idade do grupo: ", velho, novo)
+   escreval("Quantidade de mulheres com salário até R$100: ", m100)
+
+Fimalgoritmo

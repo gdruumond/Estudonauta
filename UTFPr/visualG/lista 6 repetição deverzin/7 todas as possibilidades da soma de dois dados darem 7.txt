@@ -1,0 +1,24 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/19/2021
+Var
+   // Seção de Declarações das variáveis
+   c, i, p : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+
+   para c <- 1 ate 6 faca
+      para i <- 1 ate 6 faca
+         se c + i = 7 entao
+            escreval(c,",",i,"; ")
+            p <- p + 1
+         fimse
+      fimpara
+   fimpara
+
+   escreva("Total de possibilidades encontradas: ", p)
+Fimalgoritmo

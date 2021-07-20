@@ -1,0 +1,33 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/19/2021
+Var
+   // Seção de Declarações das variáveis
+   rest, resc : real
+   flag : caracter
+   c : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   flag <- "+"
+
+   para c <- 1 ate 10 faca
+      resc <- c / c^2
+      
+      escreva(flag, c, "/", c^2, " ")
+      
+      escolha flag
+      caso "+"
+         rest <-  rest + resc
+         flag <- "-"
+      caso "-"
+         rest <- rest - resc
+         flag <- "+"
+      fimescolha
+   fimpara
+   
+   escreva(" = ", rest)
+Fimalgoritmo

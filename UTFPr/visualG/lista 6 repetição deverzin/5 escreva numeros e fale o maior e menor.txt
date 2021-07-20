@@ -1,0 +1,35 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/20/2021
+Var
+   // Seção de Declarações das variáveis
+   num, c, maior, menor : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   c <- 1
+   enquanto (num >= 0) faca
+
+      escreva("Escreva um número: ")
+      leia(num)
+
+      se c = 1 entao
+         maior <- num
+         menor <- num
+      senao
+         se num > maior entao
+            maior <- num
+         senao
+            se num < menor entao
+               menor <- num
+            fimse
+         fimse
+      fimse
+      c <- c + 1
+   fimenquanto
+
+   escreva("Maior e menor número informado: ", maior, menor)
+Fimalgoritmo
