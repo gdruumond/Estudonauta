@@ -1,0 +1,28 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/22/2021
+Var
+   // Seção de Declarações das variáveis
+   n, fat, num, c, i : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreva("Quantos números devem ser lidos? ")
+   leia(n)
+
+   fat <- 1
+   para c <- 1 ate n faca
+      escreva("Número: ")
+      leia(num)
+
+      para i <- 1 ate num faca
+         fat <- fat * i
+      fimpara
+
+      escreval("Fatorial do número: ", fat)
+      fat <- 1
+   fimpara
+Fimalgoritmo
