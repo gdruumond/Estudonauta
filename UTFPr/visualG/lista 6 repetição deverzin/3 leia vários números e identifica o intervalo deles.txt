@@ -1,0 +1,40 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/22/2021
+Var
+   // Seção de Declarações das variáveis
+   num, a, s, d, f : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+
+   enquanto num >= 0 faca
+      escreva("Escreva um número: ")
+      leia(num)
+
+      se (num >= 0) e (num <= 25) entao
+         a <- a + 1
+      fimse
+
+      se (num >= 26) e (num <= 50) entao
+         s <- s + 1
+      fimse
+
+      se (num >= 51) e (num <= 75) entao
+         d <- d + 1
+      fimse
+
+      se (num >= 76) e (num <= 100) entao
+         f <- f + 1
+      fimse
+   fimenquanto
+
+   escreval(a, " números entre 0 e 25")
+   escreval(s, " números entre 26 e 50")
+   escreval(d, " números entre 51 e 75")
+   escreval(f, " números entre 76 e 100")
+
+Fimalgoritmo

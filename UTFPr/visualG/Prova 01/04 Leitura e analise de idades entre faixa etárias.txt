@@ -1,0 +1,72 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Leitura e analise de idades entre faixa etárias
+// Autor(a)    : Gabriel Augusto Drumond Soares
+// Data atual  : 7/23/2021
+Var
+   // Seção de Declarações das variáveis
+   idade, c, um, dois, tres, quatro, cinco, maior, diferenca, somaum, somadois : inteiro
+   faixa : caracter
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+
+   para c <- 1 ate 50 faca
+      escreva("Idade: ")
+      leia(idade)
+
+      se (idade <= 15) entao
+         um <- um + 1
+         somaum <- somaum + idade
+         se um > maior entao
+            maior <- um
+            faixa <- "1º Faixa"
+         fimse
+      fimse
+
+      se (idade >= 16) e (idade <= 30) entao
+         dois <- dois + 1
+         somadois <- somadois + idade
+         se dois > maior entao
+            maior <- dois
+            faixa <- "2º Faixa"
+         fimse
+      fimse
+
+      se (idade >= 31) e (idade <= 45) entao
+         tres <- tres + 1
+         se tres > maior entao
+            maior <- tres
+            faixa <- "3º Faixa"
+         fimse
+      fimse
+
+      se (idade >= 46) e (idade <= 60) entao
+         quatro <- quatro + 1
+         se quatro > maior entao
+            maior <- quatro
+            faixa <- "4º Faixa"
+         fimse
+      fimse
+
+      se (idade > 60) entao
+         cinco <- cinco + 1
+         se cinco > maior entao
+            maior <- cinco
+            faixa <- "5º Faixa"
+         fimse
+      fimse
+   fimpara
+
+   diferenca <- somaum - somadois
+
+   escreval("Quantidade de pessoas em cada faixa etária ")
+   escreval("1º: ", um)
+   escreval("2º: ", dois)
+   escreval("3º: ", tres)
+   escreval("4º: ", quatro)
+   escreval("5º: ", cinco)
+   escreval("A diferença de idade entre a 1º para a 2º faixa etária: ", diferenca)
+   escreval("Faixa etária que contem o maior número de pessoas: ", faixa)
+Fimalgoritmo

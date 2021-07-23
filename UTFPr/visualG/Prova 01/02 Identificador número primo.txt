@@ -1,0 +1,35 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Identificador de número primo
+// Autor(a)    : Gabriel Augusto Drumond Soares
+// Data atual  : 7/23/2021
+Var
+   // Seção de Declarações das variáveis
+   num, n, i, c, d : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+
+   escreva("Quantos números devem ser lidos? ")
+   leia(n)
+
+   para c <- 1 ate n faca
+      escreva("Número: ")
+      leia(num)
+
+      para i <- 1 ate num faca
+         se (num mod i = 0) entao
+            d <- d + 1
+         fimse
+      fimpara
+
+      se d = 2 entao
+         escreval("SIM, é número primo!")
+      senao
+         escreval("NÃO é primo!")
+      fimse
+      d <- 0
+   fimpara
+
+Fimalgoritmo

@@ -1,0 +1,59 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Pesquisa para Prefeitura
+// Autor(a)    : Gabriel Augusto Drumond Soares
+// Data atual  : 7/23/2021
+Var
+   // Seção de Declarações das variáveis
+   idade, nFamilia, totFamilia, masc, fem, maior, menor, media, c : real
+   sexo : caracter
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   enquanto idade >= 0 faca
+      escreva("Escreva a idade: ")
+      leia(idade)
+
+      se idade < 0 entao
+         interrompa
+      fimse
+
+      escreva("Escreva o sexo: ")
+      leia(sexo)
+      escreva("Número de pessoas na família: ")
+      leia(nFamilia)
+
+      totFamilia <- totFamilia + nFamilia
+
+      se sexo = "M" entao
+         masc <- masc + 1
+      senao
+         se sexo = "F" entao
+            fem <- fem + 1
+         fimse
+      fimse
+
+      se c = 0 entao
+         menor <- idade
+         maior <- idade
+      fimse
+      
+      se idade > maior entao
+         maior <- idade
+      fimse
+      se idade < menor entao
+         menor <- idade
+      fimse
+      
+      c <- c + 1
+   fimenquanto
+
+   media <- totFamilia / c
+
+   escreval("Média de pessoas por família: ", media)
+   escreval("Número de pessoas do sexo masculino: ", masc)
+   escreval("Número de pessoas do sexo feminino: ", fem)
+   escreval("Maior idade das pessoas que responderam a pesquisa: ", maior)
+   escreval("Menor idade das pessoas que responderam a pesquisa: ", menor)
+Fimalgoritmo

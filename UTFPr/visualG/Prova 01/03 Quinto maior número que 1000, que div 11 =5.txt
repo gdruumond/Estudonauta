@@ -1,0 +1,27 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Quinto maior número que 1000 div 11 = 5
+// Autor(a)    : Gabriel Augusto Drumond Soares
+// Data atual  : 7/23/2021
+Var
+   // Seção de Declarações das variáveis
+   i, c : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   c <- 1000
+   enquanto i < 5 faca
+   
+      se c div 11 = 5 entao
+         i <- i + 1
+      fimse
+
+      c <- c + 1
+   fimenquanto
+
+   escreva("O quinta maior número que 1000, cuja divisão por 11 tem resto 5 é: ", c)
+
+
+
+Fimalgoritmo

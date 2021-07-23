@@ -1,0 +1,209 @@
+========================================================================================================================================================================
+QUESTÃO 01
+========================================================================================================================================================================
+
+Algoritmo "semnome"
+//
+//
+// Descrição   : Pesquisa para Prefeitura
+// Autor(a)    : Gabriel Augusto Drumond Soares
+// Data atual  : 7/23/2021
+Var
+   // Seção de Declarações das variáveis
+   idade, nFamilia, totFamilia, masc, fem, maior, menor, media, c : real
+   sexo : caracter
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   enquanto idade >= 0 faca
+      escreva("Escreva a idade: ")
+      leia(idade)
+
+      se idade < 0 entao
+         interrompa
+      fimse
+
+      escreva("Escreva o sexo: ")
+      leia(sexo)
+      escreva("Número de pessoas na família: ")
+      leia(nFamilia)
+
+      totFamilia <- totFamilia + nFamilia
+
+      se sexo = "M" entao
+         masc <- masc + 1
+      senao
+         se sexo = "F" entao
+            fem <- fem + 1
+         fimse
+      fimse
+
+      se c = 0 entao
+         menor <- idade
+         maior <- idade
+      fimse
+      
+      se idade > maior entao
+         maior <- idade
+      fimse
+      se idade < menor entao
+         menor <- idade
+      fimse
+      
+      c <- c + 1
+   fimenquanto
+
+   media <- totFamilia / c
+
+   escreval("Média de pessoas por família: ", media)
+   escreval("Número de pessoas do sexo masculino: ", masc)
+   escreval("Número de pessoas do sexo feminino: ", fem)
+   escreval("Maior idade das pessoas que responderam a pesquisa: ", maior)
+   escreval("Menor idade das pessoas que responderam a pesquisa: ", menor)
+Fimalgoritmo
+
+========================================================================================================================================================================
+QUESTÃO 02
+========================================================================================================================================================================
+
+Algoritmo "semnome"
+//
+//
+// Descrição   : Identificador de número primo
+// Autor(a)    : Gabriel Augusto Drumond Soares
+// Data atual  : 7/23/2021
+Var
+   // Seção de Declarações das variáveis
+   num, n, i, c, d : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+
+   escreva("Quantos números devem ser lidos? ")
+   leia(n)
+
+   para c <- 1 ate n faca
+      escreva("Número: ")
+      leia(num)
+
+      para i <- 1 ate num faca
+         se (num mod i = 0) entao
+            d <- d + 1
+         fimse
+      fimpara
+
+      se d = 2 entao
+         escreval("SIM, é número primo!")
+      senao
+         escreval("NÃO é primo!")
+      fimse
+      d <- 0
+   fimpara
+
+Fimalgoritmo
+
+========================================================================================================================================================================
+QUESTÃO 03
+========================================================================================================================================================================
+
+Algoritmo "semnome"
+//
+//
+// Descrição   : Quinto maior número que 1000 div 11 = 5
+// Autor(a)    : Gabriel Augusto Drumond Soares
+// Data atual  : 7/23/2021
+Var
+   // Seção de Declarações das variáveis
+   i, c : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   c <- 1000
+   enquanto i < 5 faca
+   
+      se c div 11 = 5 entao
+         i <- i + 1
+      fimse
+
+      c <- c + 1
+   fimenquanto
+
+   escreva("O quinta maior número que 1000, cuja divisão por 11 tem resto 5 é: ", c)
+Fimalgoritmo
+
+========================================================================================================================================================================
+QUESTÃO 04
+========================================================================================================================================================================
+
+Algoritmo "semnome"
+//
+//
+// Descrição   : Leitura e analise de idades entre faixa etárias
+// Autor(a)    : Gabriel Augusto Drumond Soares
+// Data atual  : 7/23/2021
+Var
+   // Seção de Declarações das variáveis
+   idade, c, um, dois, tres, quatro, cinco, maior, diferenca, somaum, somadois : inteiro
+   faixa : caracter
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+
+   para c <- 1 ate 50 faca
+      escreva("Idade: ")
+      leia(idade)
+
+      se (idade <= 15) entao
+         um <- um + 1
+         somaum <- somaum + idade
+         se um > maior entao
+            maior <- um
+            faixa <- "1º Faixa"
+         fimse
+      fimse
+
+      se (idade >= 16) e (idade <= 30) entao
+         dois <- dois + 1
+         somadois <- somadois + idade
+         se dois > maior entao
+            maior <- dois
+            faixa <- "2º Faixa"
+         fimse
+      fimse
+
+      se (idade >= 31) e (idade <= 45) entao
+         tres <- tres + 1
+         se tres > maior entao
+            maior <- tres
+            faixa <- "3º Faixa"
+         fimse
+      fimse
+
+      se (idade >= 46) e (idade <= 60) entao
+         quatro <- quatro + 1
+         se quatro > maior entao
+            maior <- quatro
+            faixa <- "4º Faixa"
+         fimse
+      fimse
+
+      se (idade > 60) entao
+         cinco <- cinco + 1
+         se cinco > maior entao
+            maior <- cinco
+            faixa <- "5º Faixa"
+         fimse
+      fimse
+   fimpara
+
+   diferenca <- somaum - somadois
+
+   escreval("Quantidade de pessoas em cada faixa etária ")
+   escreval("1º: ", um)
+   escreval("2º: ", dois)
+   escreval("3º: ", tres)
+   escreval("4º: ", quatro)
+   escreval("5º: ", cinco)
+   escreval("A diferença de idade entre a 1º para a 2º faixa etária: ", diferenca)
+   escreval("Faixa etária que contem o maior número de pessoas: ", faixa)
+Fimalgoritmo
