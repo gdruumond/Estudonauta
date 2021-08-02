@@ -1,0 +1,35 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 7/30/2021
+Var
+   // Seção de Declarações das variáveis
+   nome : vetor[1..10] de caracter
+   nota : vetor[1..10] de real
+   i : inteiro
+   soma, media : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   para i de 1 ate 10 faca
+      escreva("Nome: ")
+      leia(nome[i])
+      escreva("Nota: ")
+      leia(nota[i])
+
+      soma <- nota[i] + soma
+   fimpara
+
+   media <- soma / i
+
+   para i de 1 ate 10 faca
+         se (nota[i] >= media) entao
+         escreval(nome[i], " está acima da média com nota ", nota[i])
+      fimse
+   fimpara
+   
+   escreva("Média: ", soma / i)
+
+Fimalgoritmos

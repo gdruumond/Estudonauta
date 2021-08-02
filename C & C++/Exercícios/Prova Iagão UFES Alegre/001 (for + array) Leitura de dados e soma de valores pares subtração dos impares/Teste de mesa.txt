@@ -1,0 +1,15 @@
+
+    a) 1; 2; 3; 4;
+    contador    numero[contador]    somapar     somaimpar
+        1           1                   0           1
+        2           2                   2           1
+        3           3                   2           4
+        4           4                   6           4
+
+
+    b) 10; 11; 22; 33
+    contador    numero[contador]    somapar     somaimpar
+        1           10                 10           0
+        2           11                 10           11
+        3           22                 32           11
+        4           33                 32           34

@@ -1,0 +1,55 @@
+1) Escreva um algoritmo para ler um vetor com 10 elementos e apresenta-los.
+
+2) Escreva um algoritmo para definir e ler um vetor A com 10 elementos 
+construir um vetor B de mesma dimens�o que o vetor A, que dever�
+ser formado pelos elementos do vetor A multiplicado por 5. Apresentar 
+o Vetor B.
+
+3) escreva um algoritmo para definir um vetor de notas com 10 elementos, ler as notas, 
+calcular a media das notas e escrever as notas que est�o acima da m�dia.
+ 
+4) escreva um algoritmo para definir dois vetores com 10 elementos cada, sendo um vetor com nome e 
+outro com as notas dos alunos, ler os vetores, calcular a media das notas e escrever o nome e as notas 
+que est�o acima da m�dia.
+
+5) Escrever um algoritmo para definir e ler dois vetores A e B com 15 elementos cada
+construir um vetor C de mesma dimens�o que dever� ser formado pela soma dos
+elementos correspondentes do vetor   A  com B. Apresentar o vetor C.
+
+6) Escrever um algoritmo para definir e ler um vetor A com 15 elementos 
+construir um vetor B de mesma dimens�o que dever� ser formado pelo fatorial
+do elemento correspondente do vetor A. Apresentar o vetor B.
+
+7) Escrever um algoritmo para definir e ler dois vetores A e B com 15 elementos cada
+construir um vetor C com 30 elementos,  que dever� ser formado pela jun��o dos
+elementos correspondentes do vetor A e B.    Apresentar o vetor C.
+
+8) Escrever um algoritmo para definir e ler tres vetores A, B e C com 10 elementos cada
+construir um vetor D com 30 elementos,  que dever� ser formado pela jun��o dos
+elementos correspondentes do vetor A, B e C.    Apresentar o vetor D.
+
+9) Escrever um algoritmo para definir e ler dois vetores A com 10 elementos e B com 15 elementos
+construir um vetor C com 25 elementos,  que dever� ser formado pela jun��o dos
+elementos correspondentes do vetor A e B.    Apresentar o vetor C.
+
+10) Escrever um algoritmo para definir e ler um vetor com 20 elementos construir um vetor B 
+com mesma dimensao que dever� ser formado pelos elementos do vetor A invertidos,      
+ou seja o primeiro elemento do vetor A ser� o ultimo elemento do vetor B.
+
+11) Escrever um algoritmo para definir e ler um vetor A com 10 elementos, em seguida compacte o
+vetor retirando os valores negativos, colocando o resultado no vetor B, escrever o vetor B.
+
+12) Escrever um algoritmo para ler um vetor A com 100 elementos construir dois vetores B e C com mesma dimens�o 
+que dever� ser formado pela seguinte regra, vetor B dever� ser formado pelos elementos impares do vetor A e o vetor C dever� ser formado pelos elementos pares do vetor A, escrever os vetores B e C.
+
+13) Escrever um algoritmo para definir e ler um vetor A  com 20 elementos calcular e escrever o maior elemento do vetor e sua posi��o.
+
+14) Escrever um algoritmo para ler e armazenar em um vetor a temperatura m�dia de todos os dias do ano(365), calcular e escrever.
+a) Menor temperatura do ano
+b) Maior temperatura do ano
+c) temperatura media anual
+d) N�mero de dias do ano em que a temperatura foi inferior que a m�dia anual.
+
+15) Escrever um algoritmo para definir e ler um vetor A com 30 elementos.apos isto, ler um n�mero qualquer, calcular e escrever quantas vezes este numero aparece no vetor.
+
+16) Escrever um algoritmo para definir e ler um vetor com 50 elementos(todos positivos), verificar e escrever se existem n�meros repetidos no vetor e em que posi��o se encontram.
