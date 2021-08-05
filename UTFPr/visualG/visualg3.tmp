@@ -1,0 +1,32 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 8/5/2021
+Var
+   // Seção de Declarações das variáveis
+   a : vetor[1..5] de inteiro
+   b : vetor[1..5] de inteiro
+   i, j : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   para i de 1 ate 5 faca
+      escreva("informa um número para vetor A da posição ", i, ": ")
+      leia(a[i])
+   fimpara
+
+   j <- 0
+   para i de 1 ate 5 faca
+      se a[i] > 0 entao
+         j <- j + 1
+         b[j] <- a[i]
+      fimse
+   fimpara
+
+   para i de 1 ate 5 faca
+      escreval("elemento de posição ", i, ": ", b[i])
+   fimpara
+
+Fimalgoritmo

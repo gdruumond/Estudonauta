@@ -1,0 +1,48 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 8/5/2021
+Var
+   // Seção de Declarações das variáveis
+   a, b, c : vetor[1..10] de inteiro
+   i, ib, ic : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   ib <- 0
+   ic <- 0
+
+
+   para i de 1 ate 5 faca
+      escreva("informa um número para vetor A da posição ", i, ": ")
+      leia(a[i])
+   fimpara
+
+   para i de 1 ate 10 faca
+      se a[i] mos 2 = 0 entao
+         ib <- ib + 1
+         b[ib] <- a[i]
+      senao
+         ic <- ic + 1
+         c[ic] <- a[i]
+      fimse
+   fimpara
+
+   escreva("Elementos pares no vetor: ")
+   para i de 1 ate 10 faca
+      se b[i] <> 0
+         escreva("Na posição ", i, " = ", b[i])
+      fimse
+   fimpara
+
+   escreva("Elementos impares no vetor: ")
+   para i de 1 ate 10 faca
+      se c[i] <> 0
+         escreva("Na posição ", i, " = ", c[i])
+      fimse
+   fimpara
+
+
+Fimalgoritmo
