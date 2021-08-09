@@ -1,10 +1,10 @@
 Algoritmo "semnome"
 //
-// Descrição   : Aqui você descreve o que o programa faz! (função)
+// DescriÃ§Ã£o   : Aqui vocÃª descreve o que o programa faz! (funÃ§Ã£o)
 // Autor(a)    : Nome do(a) aluno(a)
 // Data atual  : 8/6/2021
 Var
-   // Seção de Declarações das variáveis
+   // SeÃ§Ã£o de DeclaraÃ§Ãµes das variÃ¡veis
    gabarito, resposta : vetor[1..13] de inteiro
    i, acerto, cartao : inteiro
    nome : caracter
@@ -12,7 +12,7 @@ Var
 
 
 Inicio
-   // Seção de Comandos, procedimento, funções, operadores, etc...
+   // SeÃ§Ã£o de Comandos, procedimento, funÃ§Ãµes, operadores, etc...
 
    para i de 1 ate 13 faca
       escreva("Gabarito ", i, ": ")
@@ -25,7 +25,7 @@ Inicio
       se nome = "fim" entao
          interrompa
       fimse
-      escreva("Número do cartão: ")
+      escreva("NÃºmero do cartÃ£o: ")
       leia(cartao)
 
       para i de 1 ate 13 faca
@@ -42,7 +42,7 @@ Inicio
       se acerto = 13 entao
          escreval("Ganhador")
       senao
-         escreval("Você não ganhou")
+         escreval("VocÃª nÃ£o ganhou")
       fimse
    fimenquanto
 

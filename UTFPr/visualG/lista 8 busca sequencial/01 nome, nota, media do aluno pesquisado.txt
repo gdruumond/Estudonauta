@@ -1,0 +1,43 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 8/6/2021
+Var
+   // Seção de Declarações das variáveis
+   nome : vetor[1..50] de caracter
+   nota1 : vetor[1..50] de real
+   nota2 : vetor[1..50] de real
+   i :  inteiro
+   aluno : caracter
+   media : real
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   para i de 1 ate 50 faca
+      escreva("Nome: ")
+      leia(nome[i])
+      escreva("Nota 1: ")
+      leia(nota1[i])
+      escreva("Nota 2: ")
+      leia(nota2[i])
+   fimpara
+
+   i <- 0
+   escreva("Aluno que queira pesquisar: ")
+   leia(aluno)
+   
+   para i de 1 ate 50 faca
+      se nome[i] = aluno entao
+         media <- (nota1[i] + nota2[i]) / 2
+         escreval("Média do aluno: ", media)
+         se media >= 6 entao
+            escreval("Aluno aprovado")
+         senao
+            escreval("Aluno reprovado")
+         fimse
+      fimse
+   fimpara
+
+Fimalgoritmo

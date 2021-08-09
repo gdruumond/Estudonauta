@@ -1,0 +1,48 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 8/5/2021
+Var
+   // Seção de Declarações das variáveis
+   temp : vetor[1..10] de real
+   maior, menor, media, soma : real
+   i, dias : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   para i de 1 ate 10 faca
+      escreva("informe temperatura do dia ", i, ": ")
+      leia(temp[i])
+   fimpara
+
+   maior <- temp[1]
+   menor <- temp[1]
+   soma <- temp[1]
+   dias <- 0
+
+   para i de 2 ate 10 faca
+      se temp[i] > maior entao
+         maior <- temp[i]
+      fimse
+      se temp[i] < menor entao
+         menor <- temp[i]
+      fimse
+      soma <- soma + temp[i]
+   fimpara
+
+   media <- soma / 10
+
+   para i de 1 ate 10 faca
+      se temp[i] < media entao
+         dias <- dias + 1
+      fimse
+   fimpara
+
+   escreval("Maior temperatura do ano: ", maior)
+   escreval("Menor temperatura do ano: ", menor)
+   escreval("Temperatura média: ", media)
+   escreval("Dias abaixo da temperatura média: ", dias)
+
+Fimalgoritmo
