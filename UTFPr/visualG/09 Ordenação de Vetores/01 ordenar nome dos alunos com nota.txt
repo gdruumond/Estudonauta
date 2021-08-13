@@ -1,0 +1,50 @@
+Algoritmo "semnome"
+Var
+   // Seção de Declarações das variáveis
+   nome : vetor[1..3] de caracter
+   auxnome : caracter
+   nota1, nota2 : vetor[1..3] de real
+   auxnota, media : real
+   i, j : inteiro
+
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   para i de 1 ate 3 faca
+      escreva("Nome: ")
+      leia(nome[i])
+      escreva("Nota 1: ")
+      leia(nota1[i])
+      escreva("Nota 2: ")
+      leia(nota2[i])
+   fimpara
+
+   para i de 1 ate 2 faca
+      para j de i+1 ate 3 faca
+         se nome[i] > nome[j] entao
+            auxnome <- nome[i]
+            nome[i] <- nome[j]
+            nome[j] <- auxnome
+
+            auxnota <- nota1[i]
+            nota1[i] <- nota1[j]
+            nota1[j] <- auxnota
+
+            auxnota <- nota2[i]
+            nota2[i] <- nota2[j]
+            nota2[j] <- auxnota
+         fimse
+      fimpara
+   fimpara
+
+   para i de 1 ate 3 faca
+      escreval("Aluno ", nome[i])
+      media <- (nota1[i] + nota2[i]) / 2
+      se media >= 7 entao
+         escreval("Aprovado")
+      senao
+         escreval("Reprovado")
+      fimse
+   fimpara
+
+Fimalgoritmo

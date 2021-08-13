@@ -1,0 +1,25 @@
+1)Escreva um algoritmo para ler duas matrizes A e B cada uma com 5 linhas e 3 colunas. construir uma matriz C de mesma dimens�o, que ser� formada pela soma dos elementos da matriz A com os elementos da matriz B, escrever a matriz C.  
+
+2)Escrever um algoritmo para definir e ler dois vetores A e B cada um com 7 elementos. Construir uma matriz C de duas dimens�es(2,7), em que a primeira linha ser� formada pelos elementos do vetor A e a segunda linha dever� ser formada pelos elementos do vetor B, escrever a matriz C.
+
+3)Escrever um algoritmo para definir e ler um vetor com 15 elementos, construir uma matriz B com 5 linhas e 3 colunas  em que a primeira coluna dever� ser formada pelos 5 primeiros elementos do vetor A somado de 7, a segunda coluna dever� ser formada pelo fatorial dos proximos 5 elementos do vetor A, e a terceira coluna dever� ser formada pelo resto da divis�o por 3 dos pr�ximos elementos do vetor A, escrever a Matriz;
+
+4)Escrever um algoritmo para definir e ler uma matriz A de 4 linhas e 5 colunas, construir uma matriz B de mesma dimens�o, onde cada elemento da matriz B dever� ser formado pelo fatorial do elemento correspondente da matriz A, escrever a matriz B.
+
+5)Escrever um algortimo para definir e ler uma matriz A com 10 linhas e 7 colunas, no final apresentar a soma dos elementos pares e a soma dos elementos impares existentes na matriz.
+
+6)Escreva um algoritmo para definir e ler uma matriz de 10 linhas 10 colunas, definir dois vetores A e B com 10 elementos cada, onde o vetor A dever� ser formado pelos elementos da diagonal principal da matriz e o vetor B dever� ser formado pelos elementos da diagonal secundaria da matriz. Escrever os vetores.
+
+7)Escreva um algoritmo para definir e ler uma matriz de 10 linhas 10 colunas, calcular e escrever a soma dos elementos situados na:
+a)Diagonal principal
+b) Diagonal secundaria
+c Acima da diagonal principal
+d) Abaixo da diagonal principal
+e) Acima da diagonal secundaria
+f) Abaixo da diagonal secundaria.
+
+8)Escreva um algoritmo para definir e ler uma matriz com 50 linhas e 3 colunas (nome, e_mail e telefone), classificar(ordenar)  a matriz pela coluna nome, realizar uma pesquisa bin�ria pela coluna nome, se encontrar mostrar e_mail e telefone, se n�o encontrar mostrar a mensagem nome n�o encontrado.
+  
+9)Escreva um algoritmo para definir e ler uma matriz com 8 linhas e 6 colunas, construir um vetor A com 8 elementos que ser� formado pela soma dos elementos de cada linha da matriz. Escrever os elementos do vetor.
+
+10)Escreva um algoritmo para definir duas matrizes com 4 linhas e 5 colunas. A matriz A dever� ser formada por valores que sejam divisiveis por 3 ou 4, enquanto a matriz B dever� ser formada por valores que sejam divisiveis por 5 ou 6. Escrever a Matriz A e B.

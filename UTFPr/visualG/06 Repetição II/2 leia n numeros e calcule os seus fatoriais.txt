@@ -18,7 +18,7 @@ Inicio
       escreva("Número: ")
       leia(num)
 
-      para i <- 1 ate num faca
+      para i de 1 ate num faca
          fat <- fat * i
       fimpara
 

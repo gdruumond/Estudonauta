@@ -1,0 +1,44 @@
+Algoritmo "semnome"
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 8/12/2021
+Var
+   // Seção de Declarações das variáveis
+   nome, email, fone : vetor[1..5] de caracter
+   i : inteiro
+   achou : logico
+   pesq : caracter
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   para i de 1 ate 5 faca
+      escreva("Nome: ")
+      leia(nome[i])
+      escreva("Email: ")
+      leia(email[i])
+      escreva("Telefone: ")
+      leia(fone[i])
+   fimpara
+
+   escreval("Nome para pesquisa [fim -> encerra a busca]: ")
+   leia(pesq)
+
+   enquanto pesq <> "fim" faca
+      achou <- falso
+      i <- 1
+      enquanto (i <= 5) e (achou = falso) faca
+         se pesq = nome[i] entao
+            achou <- verdadeiro
+         senao
+            i <- i + 1
+         fimse
+      fimenquanto
+      se achou = verdadeiro entao
+         escreval("Nome: ", pesq, " Email: ", email[i], " Telefone: ", fone[i])
+      senao
+         escreval(pesq, " não encontrado")
+      fimse
+      escreval("Nome para pesquisa [fim -> encerra a busca]: ")
+      leia(pesq)
+   fimenquanto
+Fimalgoritmo

@@ -1,49 +1,37 @@
 Algoritmo "semnome"
 //
+//
 // Descrição   : Aqui você descreve o que o programa faz! (função)
 // Autor(a)    : Nome do(a) aluno(a)
-// Data atual  : 8/6/2021
+// Data atual  : 8/13/2021
 Var
    // Seção de Declarações das variáveis
-   gabarito, resposta : vetor[1..13] de inteiro
-   i, acerto, cartao : inteiro
-   nome : caracter
-
-
+   a : vetor[1..3,1..5] de real
+   c : vetor[1..15] de real
+   i, j, o, fat : inteiro
 
 Inicio
    // Seção de Comandos, procedimento, funções, operadores, etc...
-
-   para i de 1 ate 13 faca
-      escreva("Gabarito ", i, ": ")
-      leia(gabarito[i])
+   para i de 1 ate 15 faca
+      escreva("Vetor ",i)
+      leia(c[i])
    fimpara
 
-   enquanto nome <> "fim" faca
-      escreva("Nome: ")
-      leia(nome)
-      se nome = "fim" entao
-         interrompa
-      fimse
-      escreva("Número do cartão: ")
-      leia(cartao)
-
-      para i de 1 ate 13 faca
-         escreva("Resposta ", i, ": ")
-         leia(resposta[i])
-      fimpara
-
-      para i de 1 ate 13 faca
-         se gabarito[i] = resposta[i] entao
-            acerto <- acerto + 1
+   para i de 1 ate 3 faca
+      para j de 1 ate 5 faca
+         se i = 1 entao
+            a[i,j] <- c[i] + 7
+         fimse
+         se i = 2 entao
+            fat <- 1
+            para o de 1 ate c[i] faca
+               fat <- fat * c[i]
+            fimpara
+            a[i,j] <- fat
+         fimse
+         se i = 3 entao
+            a[i,j] <- c[i] / 3
          fimse
       fimpara
-
-      se acerto = 13 entao
-         escreval("Ganhador")
-      senao
-         escreval("Você não ganhou")
-      fimse
-   fimenquanto
-
+   fimpara
 Fimalgoritmo
