@@ -1,0 +1,14 @@
+
+scanf(n)
+for(c=1, c<n, c++)
+	printf("\n")
+	for(i=1, i<y, i++)
+		printf("*")
+		y++
+		i = 0
+
+
+
+
+
+		

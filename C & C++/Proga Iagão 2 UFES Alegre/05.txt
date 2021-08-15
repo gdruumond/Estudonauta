@@ -1,0 +1,80 @@
+a salario minimo
+b salario minimo + 3% do salario minimo por peça acima das 30 iniciais
+c salario minimo + 5% do salario minimo por peça acimadas 30 iniciais
+
+recebe:
+	quantos operarios serao inseridos
+	nome
+	númer de peças fabricadas no mes
+	sexo do operario
+
+saida instantanea:
+	salario do operario
+
+saida no final do algoritmo: 
+	total da folha de pagamento
+	numero total de peças fabricadas
+	media de peças fabricadas pelas mulheres em cada classe
+	nome e sexo do operário de maior salário
+
+---------------------------------------------
+
+char
+int 
+float
+
+printf("Quantos operários serão inseridos? \n")
+scanf(tot_operarios)
+
+for(c=1; c<tot_operarios; c++){
+	printf("Classe do operário: ")
+	scanf(classe)
+	printf("Nome: ")
+	scanf(nome)
+	printf("Sexo: ")
+	scanf(sexo)
+	printf("Peças fabricadas no mês")
+	scanf(pecas)
+		
+	if(pecas >= 31 && pecas <= 35){
+		excedente = pecas - 30
+		salario = salario + (salario 
+	if(pecas > 35){
+		excedente = pecas - 30
+		salario = salario + (salario * ((excedente*3)/100))
+	
+	printf("Salário do funcionário ", nome, ": ", salario)
+	
+	folha_pagamento += salario
+	pecas_fabricadas += pecas 
+	
+	if (c=1){
+		maior_salario = salario
+		nome_maior_salario = nome
+		sexo_maior_salario = sexo
+	} else{
+		if(salario > maior_salario){
+			maior_salario = salario
+			nome_maior_salario = nome
+			sexo_maior_salario = sexo
+		}
+	}
+	
+	if(pecas <= 30 && sexo = "F"){
+		pecas_A_mulheres += pecas
+		mulheres_A++
+	if(pecas >= 31 && pecas <= 35 && sexo = "F"){
+		pecas_B_mulheres += pecas
+		mulheres_B++
+	if(pecas > 35 && sexo = "F"){
+		pecas_C_mulheres += pecas
+		mulheres_C++
+}
+
+	media_mulheres_A = pecas_A_mulheres / mulheres_A
+	media_mulheres_B = pecas_A_mulheres / mulheres_A
+	media_mulheres_C = pecas_A_mulheres / mulheres_A
+
+
+
+

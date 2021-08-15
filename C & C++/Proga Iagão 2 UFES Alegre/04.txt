@@ -1,0 +1,9 @@
+scanf(x, y)
+
+for(C=1; c<x; C++)
+	printf("Capitulo ", c)
+	for(i=1; i<y; i++)
+		printf("\n.	Secao ", c, ".", i)
+	}
+	prinf("\n\n")
+}
