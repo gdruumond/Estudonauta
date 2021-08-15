@@ -5,6 +5,8 @@
 // Iago Gravel do Nascimento
 // Pedro Tardin dos Santos Jacinto
 // Entradas para teste do programa:
+//      3
+//
 //      Maria
 //      30
 //      F
@@ -61,7 +63,7 @@ int main(void)
     printf("Quantos funcionários deseja incluir no sistema? ");
     scanf("%d", &operarios);
 
-    do
+    for(c=1; c<=operarios; c++)
     {
         printf("\nNome do funcionario: ");
         fflush(stdin);
@@ -130,10 +132,7 @@ int main(void)
         }
 
         printf("\nSalario do funcionario: %2.f\n", salario);
-
-        c++;
-
-    } while(c<=operarios);
+    }
 
     media_mulher_a = total_peca_mulher_a / total_mulher_a;
     media_mulher_c = total_peca_mulher_c / total_mulher_c;
@@ -145,5 +144,4 @@ int main(void)
     printf("Media de pecas de mulheres da classe B: %f\n", media_mulher_b );
     printf("Media de pecas de mulheres da classe C: %f\n", media_mulher_c );
     printf("%s é do genêro %c, e é o operário com maior salário do mês, com R$%2.f de ganhos\n", operario_maior_salario, sexo_maior_salario, maior_salario);
-
 }
