@@ -1,0 +1,23 @@
+Algoritmo "semnome"
+Var
+   // Seção de Declarações das variáveis
+   a : vetor[1..3, 1..3] de inteiro
+   i, j, somapar, somaimpar : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   para i de 1 ate 3 faca
+      para j de 1 ate 3 faca
+         escreva("Matriz ",i,",",j,": ")
+         leia(a[i,j])
+         se a[i,j] mod 2 = 0 entao
+            somapar <- somapar + a[i,j]
+         senao
+            somaimpar <- somaimpar + a[i,j]
+         fimse
+      fimpara
+   fimpara
+
+   escreval("Soma dos pares: ", somapar)
+   escreva("Soma dos impares: ", somaimpar)
+Fimalgoritmo

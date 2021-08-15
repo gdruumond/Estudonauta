@@ -1,0 +1,26 @@
+Algoritmo "semnome"
+Var
+   // Seção de Declarações das variáveis
+   a, b : vetor[1..4, 1..5] de inteiro
+   i, j, k : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   para i de 1 ate 4 faca
+      para j de 1 ate 5 faca
+         escreva("Matriz ",i,",",j,": ")
+         leia(a[i,j])
+         b[i,j] <- 1
+         para k de 2 ate a[i,j] faca
+            b[i,j] <- b[i,j] * k
+         fimpara
+      fimpara
+   fimpara
+
+   para i de 1 ate 4 faca
+      escreva(" ")
+      para j de 1 ate 5 faca
+         escreva(" ", b[i,j])
+      fimpara
+   fimpara
+Fimalgoritmo
