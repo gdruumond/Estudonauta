@@ -1,5 +1,5 @@
 // Iago Gravel do Nascimento
-//
+// Pedro Tardin dos Santos Jacinto
 // Entradas para teste do programa: 10 capitulos e 2 seções; 2 capitulos e 10 seções; 0 capitulos e 0 seções.
 
 #include <stdio.h>

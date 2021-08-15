@@ -3,8 +3,20 @@
 #include <stdlib.h>
 #include <string.h>
 // Iago Gravel do Nascimento
-//
+// Pedro Tardin dos Santos Jacinto
 // Entradas para teste do programa:
+//      Maria
+//      30
+//      F
+//
+//      Julia
+//      34
+//      F
+//
+//      Lorena
+//      38
+//      F
+//
 // Adotamos o valor de R$1.000,00 para salário mínimo
 
 int main(void)
@@ -18,9 +30,9 @@ int main(void)
     int total_mulher_a, total_mulher_b, total_mulher_c;
     int total_peca_mulher_a, total_peca_mulher_b, total_peca_mulher_c;
 
-    char nome[50]; // ERRO AQUI - Faltou determinar o tamanho máximo da string
+    char nome[50];
     char sexo, sexo_maior_salario, resposta;
-    char operario_maior_salario[50]; // ERRO AQUI - Faltou determinar o tamanho máximo da string
+    char operario_maior_salario[50];
 
     salario_minimo = 1000.0;
     folha_pagamento = 0.0;
@@ -49,11 +61,11 @@ int main(void)
     printf("Quantos funcionários deseja incluir no sistema? ");
     scanf("%d", &operarios);
 
-    for(c=1; c<= operarios; c++)
+    do
     {
-        printf("Nome do funcionario: ");
+        printf("\nNome do funcionario: ");
         fflush(stdin);
-        scanf("%s", nome); // ERRO AQUI - Nome é uma string e nao um caracter apenas
+        scanf("%s", &nome);
         printf("Pecas fabricados no mes: ");
         fflush(stdin);
         scanf("%d", &pecas);
@@ -86,9 +98,11 @@ int main(void)
                 total_peca_mulher_b += pecas;
             }
         }
-        else
+
+        // Classe C
+        if ( pecas > 35 )
         {
-            // Classe C
+
             salario = salario_minimo + ( pecas - 30 ) * (0.05 * salario_minimo);
 
             if ( sexo == 'F' || sexo == 'f' )
@@ -100,7 +114,7 @@ int main(void)
 
         folha_pagamento += salario;
 
-        if (c = 1)
+        if (c == 1)
         {
             maior_salario = salario;
             strcpy(operario_maior_salario, nome);
@@ -115,8 +129,11 @@ int main(void)
             }
         }
 
-        printf("Salario do funcionario: %2.f\n", salario);
-    }
+        printf("\nSalario do funcionario: %2.f\n", salario);
+
+        c++;
+
+    } while(c<=operarios);
 
     media_mulher_a = total_peca_mulher_a / total_mulher_a;
     media_mulher_c = total_peca_mulher_c / total_mulher_c;
@@ -128,4 +145,5 @@ int main(void)
     printf("Media de pecas de mulheres da classe B: %f\n", media_mulher_b );
     printf("Media de pecas de mulheres da classe C: %f\n", media_mulher_c );
     printf("%s é do genêro %c, e é o operário com maior salário do mês, com R$%2.f de ganhos\n", operario_maior_salario, sexo_maior_salario, maior_salario);
+
 }

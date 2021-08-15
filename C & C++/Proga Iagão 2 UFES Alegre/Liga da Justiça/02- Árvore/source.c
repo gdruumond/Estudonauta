@@ -1,5 +1,5 @@
 // Iago Gravel do Nascimento
-//
+// Pedro Tardin dos Santos Jacinto
 // Entradas para teste do programa: 2; 6; 10.
 
 #include <stdio.h>
