@@ -1,0 +1,27 @@
+// Iago Gravel do Nascimento
+//
+// Entradas para teste do programa: 10 capitulos e 2 seções; 2 capitulos e 10 seções; 0 capitulos e 0 seções.
+
+#include <stdio.h>
+#include <locale.h>
+
+void main(){
+    setlocale(0, "Portuguese");
+
+    // c, i e j são contadores de repetição
+    int c, i, j, capitulos, secoes;
+
+    printf("Digite o número de capítulos: ");
+    scanf("%i", &capitulos);
+    printf("Digite o número de seções de cada capítulo: ");
+    scanf("%i", &secoes);
+
+    for(c=0; c<capitulos; c++){
+        printf("\nCapítulo %i", c+1);
+        for(i=0; i<secoes; i++){
+            printf("\n.     Seção %i", i+1);
+        }
+        j++;
+        printf("\n");
+    }
+}
