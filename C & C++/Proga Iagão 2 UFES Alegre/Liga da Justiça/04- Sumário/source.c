@@ -1,3 +1,4 @@
+// Grupo Liga da Justiça
 // Iago Gravel do Nascimento
 // Pedro Tardin dos Santos Jacinto
 // Entradas para teste do programa: 10 capitulos e 2 seções; 2 capitulos e 10 seções; 0 capitulos e 0 seções.
@@ -8,8 +9,7 @@
 void main(){
     setlocale(0, "Portuguese");
 
-    // c, i e j são contadores de repetição
-    int c, i, j, capitulos, secoes;
+    int c, i, capitulos, secoes;
 
     printf("Digite o número de capítulos: ");
     scanf("%i", &capitulos);
@@ -21,7 +21,6 @@ void main(){
         for(i=0; i<secoes; i++){
             printf("\n.     Seção %i", i+1);
         }
-        j++;
         printf("\n");
     }
 }

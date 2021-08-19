@@ -1,3 +1,4 @@
+// Grupo Liga da Justiça
 // Iago Gravel do Nascimento
 // Pedro Tardin dos Santos Jacinto
 // Entradas para teste do programa: 1400; 2016; 2021

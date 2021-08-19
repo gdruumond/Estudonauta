@@ -1,6 +1,7 @@
+// Grupo Liga da Justiça
 // Iago Gravel do Nascimento
 // Pedro Tardin dos Santos Jacinto
-// Entradas para teste do programa: 2; 6; 10.
+// Entradas para teste do programa: 2; 12; 33.
 
 #include <stdio.h>
 #include <locale.h>

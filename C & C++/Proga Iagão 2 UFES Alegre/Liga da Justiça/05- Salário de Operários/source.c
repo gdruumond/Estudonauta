@@ -1,11 +1,8 @@
-#include <stdio.h>
-#include <locale.h>
-#include <stdlib.h>
-#include <string.h>
+// Grupo Liga da Justiça
 // Iago Gravel do Nascimento
 // Pedro Tardin dos Santos Jacinto
 // Entradas para teste do programa:
-//      3
+//      inserção dos dados de 3 operarios no sistema
 //
 //      Maria
 //      30
@@ -20,6 +17,11 @@
 //      F
 //
 // Adotamos o valor de R$1.000,00 para salário mínimo
+
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main(void)
 {
