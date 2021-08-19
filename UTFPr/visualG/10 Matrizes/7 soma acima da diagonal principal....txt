@@ -1,0 +1,52 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 8/19/2021
+Var
+   // Seção de Declarações das variáveis
+   matriz: vetor[1..4,1..4] de inteiro
+   somaDP, somaDS, somaADP, somaBDP, somaADS, somaBDS : inteiro
+   i,j : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   para i de 1 ate 4 faca
+      para j de 1 ate 4 faca
+         escreva("Informe número para linha ", i, " coluna ", j, ": ")
+         leia(matriz[i,j])
+      fimpara
+   fimpara
+
+   para i de 1 ate 4 faca
+      para j de 1 ate 4 faca
+         se (i=j) entao
+            somaDP <- somaDP + matriz[i,i]
+         fimse
+         se (i+j=5) entao
+            somaDS <- somaDS + matriz[i,i]
+         fimse
+         se i>j entao
+            somaADP <- somaADP + matriz[i,i]
+         fimse
+         se i<j entao
+            somaBDP <- somaBDP + matriz[i,i]
+         fimse
+         se i+j > 5 entao
+            somaBDS <- somaBDS + matriz[i,i]
+         fimse
+         se i+j <= 4 entao
+            somaADS <- somaADS + matriz[i,i]
+         fimse
+      fimpara
+   fimpara
+
+   escreval("Soma elementos na Diagonal Principal: ", somaDP)
+   escreval("Soma elementos na Diagonal Secundária: ", somaDS)
+   escreval("Soma acima da Diagonal Principal: ", somaADP)
+   escreval("Soma acima da Diagonal Secundária: ", somaADS)
+   escreval("Soma abaixo da Diagonal Principal: ", somaBDP)
+   escreval("Soma abaixo da Diagonal Secundária: ", somaBDS)
+
+Fimalgoritmo

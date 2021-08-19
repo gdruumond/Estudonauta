@@ -20,6 +20,6 @@ f) Abaixo da diagonal secundaria.
 
 8)Escreva um algoritmo para definir e ler uma matriz com 50 linhas e 3 colunas (nome, e_mail e telefone), classificar(ordenar)  a matriz pela coluna nome, realizar uma pesquisa bin�ria pela coluna nome, se encontrar mostrar e_mail e telefone, se n�o encontrar mostrar a mensagem nome n�o encontrado.
   
-9)Escreva um algoritmo para definir e ler uma matriz com 8 linhas e 6 colunas, construir um vetor A com 8 elementos que ser� formado pela soma dos elementos de cada linha da matriz. Escrever os elementos do vetor.
+9)Escreva um algoritmo para definir e ler uma matriz com 5 linhas e 4 colunas, construir um vetor A com 5 elementos que ser� formado pela soma dos elementos de cada linha da matriz. Escrever os elementos do vetor.
 
 10)Escreva um algoritmo para definir duas matrizes com 4 linhas e 5 colunas. A matriz A dever� ser formada por valores que sejam divisiveis por 3 ou 4, enquanto a matriz B dever� ser formada por valores que sejam divisiveis por 5 ou 6. Escrever a Matriz A e B.
