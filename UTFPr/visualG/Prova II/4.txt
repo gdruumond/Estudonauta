@@ -1,0 +1,44 @@
+Algoritmo "semnome"
+Var
+   // Seção de Declarações das variáveis
+   matriz : vetor[1..7,1..7] de inteiro
+   i, j, aux: inteiro
+
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   para i de 1 ate 7 faca
+      para j de 1 ate 7 faca
+         escreva("Elemento da matriz linha ", i, " coluna ", j ,": ")
+         leia(matriz[i,j])
+      fimpara
+   fimpara
+
+   para i de 1 ate 7 faca
+      escreval(" ")
+      para j de 1 ate 7 faca
+         escreva(matriz[i,j], " ")
+      fimpara
+   fimpara
+
+   escreval(" ")
+   escreval(" ")
+   escreval(" ")
+
+   para i de 1 ate 7 faca
+      para j de 1 ate 7 faca
+         se j > i entao
+            aux <- matriz[i,j]
+            matriz[i,j] <- matriz[j,i]
+            matriz[j,i] <- aux
+         fimse
+      fimpara
+   fimpara
+
+   para i de 1 ate 7 faca
+      escreval(" ")
+      para j de 1 ate 7 faca
+         escreva(matriz[i,j], " ")
+      fimpara
+   fimpara
+Fimalgoritmo

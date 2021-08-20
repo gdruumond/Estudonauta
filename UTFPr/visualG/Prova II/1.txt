@@ -1,0 +1,42 @@
+Algoritmo "semnome"
+//
+//
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 8/20/2021
+Var
+   // Seção de Declarações das variáveis
+   cidade: vetor[1..10] de caracter
+   cep: vetor[1.10] de inteiro
+   estado: vetor[1..10] de caracter
+   i: inteiro
+   resp: caracter
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   para i de 1 ate 10 faca
+      escreva("Escreva cidade: ")
+      leia(cidade[i])
+      escreva("Insira CEP: ")
+      leia(cep[i])
+      escreva("Escreva o estado: ")
+      leia(estado[i])
+   fimpara
+
+   enquanto resp <> "fim" faca
+      escreva("Escreva cidade: ")
+      leia(resp)
+
+      para i de 1 ate 10 faca
+         se cidade[i] = resp entao
+            escreval("CEP: ", cep[i])
+            escreval("Estado: ", estado[i])
+            interrompa
+         senao
+            escreval("Cidade não encontrada!")
+            interrompa
+         fimse
+      fimpara
+   fimenquanto
+
+Fimalgoritmo

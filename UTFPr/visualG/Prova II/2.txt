@@ -1,0 +1,38 @@
+Algoritmo "semnome"
+Var
+   // Seção de Declarações das variáveis
+   ccidade, populacao : vetor[1..10] de inteiro
+   i, j, aux : inteiro
+
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   para i de 1 ate 10 faca
+      escreva("Código cidade: ")
+      leia(ccidade[i])
+      escreva("População: ")
+      leia(populacao[i])
+   fimpara
+
+   para i de 1 ate 9 faca
+      para j de i+1 ate 10 faca
+         se ccidade[i] > ccidade[j] entao
+            aux <- ccidade[i]
+            ccidade[i] <- ccidade[j]
+            ccidade[j] <- aux
+
+            aux <- populacao[i]
+            populacao[i] <- populacao[j]
+            populacao[j] <- aux
+         fimse
+      fimpara
+   fimpara
+
+   escreval("Ordenados pelo código da cidade: ")
+
+   para i de 1 ate 10 faca
+        escreval("Código da cidade: ", ccidade[i])
+        escreval("População: ", populacao[i])
+   fimpara
+
+Fimalgoritmo
