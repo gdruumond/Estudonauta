@@ -1,0 +1,60 @@
+Algoritmo "semnome"
+Tipo
+   reg_banco = registro
+      codigo, agencia, conta : inteiro
+   fimregistro
+
+   reg_livro = registro
+      titulo, autor : caracter
+   fimregistro
+
+   reg_pessoa = registro
+      nome, endereco, telefone : caracter
+   fimregistro
+
+Var
+   // Seção de Declarações das variáveis
+   banco : reg_banco
+   livro : reg_livro
+   pessoa : reg_pessoa
+   opcao : caracter
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   repita
+      escreval("a) Dados Bancários")
+      escreval("b) Dados do Livro")
+      escreval("c) Dados da pessoa")
+      escreval("f) Finalizar")
+      leia(opcao)
+      
+      escolha opcao
+              caso "a"
+                   limpatela
+                   escreva("Informe código do banco: ")
+                   leia(banco.codigo)
+                   escreva("Informe a agência: ")
+                   leia(banco.agencia)
+                   escreva("Informe o número da conta: ")
+                   leia(banco.conta)
+                   escreval("Banco: ",banco.codigo," Agencia: ",banco.agencia," Conta: ", banco.conta)
+              caso "b"
+                   limpatela
+                   escreva("Informe título:")
+                   leia(livro.titulo)
+                   escreva("Informe autor: ")
+                   leia(livro.autor)
+                   escreval("Título: ",livro.titulo, " Autor: ", livro.autor)
+              caso "c"
+                   limpatela
+                   escreva("Nome: ")
+                   leia(pessoa.nome)
+                   escreva("Endereço")
+                   leia(pessoa.endereco)
+                   escreva("Telefone:")
+                   leia(pessoa.telefone)
+                   escreval("Nome: ",pessoa.nome, " Endereço: ",pessoa.endereco, " Telefone: ", pessoa.telefone)
+      fimescolha
+      ate opcao = "f"
+
+Fimalgoritmo

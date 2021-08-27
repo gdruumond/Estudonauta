@@ -1,0 +1,22 @@
+Algoritmo "semnome"
+Tipo
+   reg_cliente = registro
+      nome, endereco, telefone : caracter
+   fimregistro
+
+Var
+   // Seção de Declarações das variáveis
+   cliente : reg_cliente
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+
+   escreva("Nome: ")
+   leia(cliente.nome)
+   escreva("Endereço: ")
+   leia(cliente.endereco)
+   escreva("Telefone:")
+   leia(cliente.telefone)
+   escreval("Nome: ",cliente.nome," Endereço: ",cliente.endereco," Telefone: ",cliente.telefone)
+
+Fimalgoritmo

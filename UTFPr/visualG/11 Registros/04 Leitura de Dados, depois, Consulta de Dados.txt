@@ -1,0 +1,42 @@
+Algoritmo "semnome"
+Tipo
+   reg_cliente = registro
+      nome, endereco, telefone : caracter
+   fimregistro
+
+Var
+   // Seção de Declarações das variáveis
+   cliente : vetor[1..50] de reg_cliente
+   opcao, nome : caracter
+   i, j : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   i <- 1
+
+   repita
+      escreva("Nome: ")
+      leia(cliente[i].nome)
+      escreva("Endereço: ")
+      leia(cliente[i].endereco)
+      escreva("Telefone:")
+      leia(cliente[i].telefone)
+      escreval("Nome: ",cliente.nome," Endereço: ",cliente.endereco," Telefone: ",cliente.telefone)
+      escreval("Novo cliente (S/N)?")
+      leia(opcao)
+      i <- i+1
+   ate (opcao = "n") ou (i = 50)
+
+   repita
+      para j de 1 ate i faca
+         escreval("Nome para consulta de dados: ")
+         leia(nome)
+         se cliente[j].nome = nome entao
+            escreval("Nome: ",cliente.nome," Endereço: ",cliente.endereco," Telefone: ",cliente.telefone)
+         senao
+            escreval("Nome não encontrado")
+         fimse
+         escreval("Escreva 'fim' para cancelar a busca")
+      fimpara
+   ate (nome = "fim")
+Fimalgoritmo
