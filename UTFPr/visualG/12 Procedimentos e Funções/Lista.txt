@@ -1,0 +1,22 @@
+1) Escreva um procedimento que recebe por parâmetro o valor, taxa e tempo calcula e escreva o valor da prestação utilizando a formula prest = valor + (valor * (taxa / 100) * tempo).
+
+2) Escreva uma função que recebe por parâmetro um numero, calcula e retorna o fatorial deste número.
+
+3) Escreva um procedimento que recebe por parâmetro um numero e informa se este número é par ou impar.
+
+4) Escreva uma função que recebe por parâmetro um número, calcula e retorna o somatório deste número.
+
+5) Escreva um algoritmo para definir e ler um vetor com 10 números tipo inteiro e implementar as sub_rotinas abaixo.
+	a) procedimento para leitura
+	b) procedimento para ordenar, recebe os valores para comparar através de parâmetros do tipo referência
+	c) procedimento para trocar os valores, recebe os valores para troca através de parâmetros do tipo referência.
+	d) procedimento para escrever o vetor ordenado
+	
+6) Faça uma função que recebe por parâmetro um valor inteiro e positivo e retorna o valor lógico Verdadeiro caso o valor seja primo e Falso em caso contrário, escrever o resultado.
+
+7) Escreva uma função que recebe a idade de uma pessoa em anos, meses e dias e retorna essa idade expressa em dias, escrever o resultado.
+
+8) Escreva uma função que verifique se um valor é perfeito ou não. Um valor é dito perfeito quando ele é igual a soma dos seus divisores excetuando ele próprio. (Ex: 6 é perfeito, 6 = 1 + 2 + 3, que são seus divisores). A função deve retornar um valor booleano.
+
+9) escrever um procedimento que recebe 3 valores inteiros por parâmetro(referencia) e retorna-os ordenados em ordem crescente, escrever os valores.
+ 

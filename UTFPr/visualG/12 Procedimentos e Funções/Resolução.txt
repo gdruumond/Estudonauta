@@ -1,0 +1,265 @@
+1)
+Algoritmo "semnome"
+// Disciplina  :  [Linguagem e Lógica de Programação] 
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 02/09/2021
+procedimento proc_calculo(pValor,pTaxa :Real; pTempo : inteiro)
+Var
+   prestacao : real
+Inicio
+   prestacao <- pValor + (pValor * pTaxa / 100 * pTempo)
+   escreva("Valor da prestacao=:",prestacao)
+fimprocedimento
+
+procedimento proc_leitura()
+inicio
+  escreva("informe valor:")
+  leia(valor)
+  escreva("informe taxa:")
+  leia(taxa)
+  escreva("informe tempo:")
+  leia(tempo1)
+fimprocedimento
+
+Var
+// Seção de Declarações das variáveis 
+  tempo1 : inteiro
+  valor, taxa : real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+  proc_leitura()
+  proc_calculo(valor, taxa, tempo1)
+Fimalgoritmo
+--------------------------------------------------------------------------------------------------------
+2)
+Algoritmo "semnome"
+// Disciplina  :  [Linguagem e Lógica de Programação] 
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 02/09/2021
+funcao fun_fatorial(pNum : inteiro) : inteiro
+Var
+   fat, i : inteiro
+Inicio
+   fat <- 1
+   para i de 2 ate pNum faca
+      fat <- fat * i
+   fimpara
+   retorne(fat)
+
+fimfuncao
+
+procedimento proc_leitura()
+inicio
+  escreva("informe numero:")
+  leia(numero)
+fimprocedimento
+
+procedimento proc_escreve()
+inicio
+  escreval("fatorial de :",numero," = ",res)
+fimprocedimento
+
+Var
+// Seção de Declarações das variáveis 
+  numero, res : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+  proc_leitura()
+  res <- fun_fatorial(numero)
+  proc_escreve()
+Fimalgoritmo
+--------------------------------------------------------------------------------------------------------------------
+3)
+Algoritmo "semnome"
+// Disciplina  :  [Linguagem e Lógica de Programação] 
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 02/09/2021
+procedimento proc_verifica(pNumero : inteiro)
+var
+  resto : inteiro
+inicio
+  resto <- pNumero mod 2
+  se resto = 0 entao
+     escreval("numero:",pNumero," é par")
+  senao
+     escreval("numero:",pNumero," é impar")
+  fimse
+fimprocedimento
+
+Var
+// Seção de Declarações das variáveis 
+  numero : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+  escreva("informe um numero:")
+  leia(numero)
+  proc_verifica(numero)
+
+Fimalgoritmo
+------------------------------------------------------------------------------------------------------------
+4)
+Algoritmo "semnome"
+// Disciplina  :  [Linguagem e Lógica de Programação] 
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 02/09/2021
+funcao fun_calcula(pNumero : inteiro) : inteiro
+var
+  soma, i : inteiro
+inicio
+  soma <- 0
+  para i de 1 ate pNumero faca
+     soma <- soma + i
+  fimpara
+  retorne(soma)
+fimfuncao
+
+Var
+// Seção de Declarações das variáveis 
+  numero,res : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+  escreva("informe um numero:")
+  leia(numero)
+  res <- fun_calcula(numero)
+  escreva("somatorio do numero ",numero," = ",res)
+
+Fimalgoritmo
+--------------------------------------------------------------------------------------------------------
+5)
+Algoritmo "semnome"
+// Disciplina  :  [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 02/09/2021
+procedimento proc_leitura()
+inicio
+   para i de 1 ate 10 faca
+      escreva("informe elemento ",i,":")
+      leia(num[i])
+   fimpara
+fimprocedimento
+
+procedimento proc_troca(var pn1, pn2 : inteiro)
+var
+   aux : inteiro
+inicio
+   aux <- pn1
+   pn1 <- pn2
+   pn2 <- aux
+fimprocedimento
+
+procedimento proc_compara(var pnum1, pnum2 : inteiro)
+inicio
+   se pnum1 > pnum2 entao
+      proc_troca(pnum1, pnum2)
+   fimse
+fimprocedimento
+
+procedimento proc_ordena()
+inicio
+   para i de 1 ate 9 faca
+      para j de i+1 ate 10 faca
+         proc_compara(num[i],num[j])
+      fimpara
+   fimpara
+fimprocedimento
+
+procedimento proc_escreva()
+inicio
+   escreval("vetor ordenado")
+   para i de 1 ate 10 faca
+     escreval(num[i])
+   fimpara
+fimprocedimento
+
+Var
+   // Seção de Declarações das variáveis
+   num : vetor[1..10] de inteiro
+   i, j : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   proc_leitura()
+   proc_ordena()
+   proc_escreva()
+Fimalgoritmo
+--------------------------------------------------------------------------------------------------------
+6)
+Algoritmo "semnome"
+// Disciplina  :  [Linguagem e Lógica de Programação] 
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 02/09/2021
+funcao fun_primo(pNum : inteiro) : logico
+var
+  i : inteiro
+  res : logico
+inicio
+  res <- verdadeiro
+  para i de 2 ate pNum div 2 faca
+    se pnum mod i = 0 entao
+       res <- falso
+    fimse
+  fimpara
+  retorne(res)
+fimfuncao
+
+Var
+// Seção de Declarações das variáveis 
+  num : inteiro
+  primo : logico
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+  escreval("informe um numero:")
+  leia(num)
+  primo <- fun_primo(num)
+  se primo = verdadeiro entao
+     escreva("numero:",num," é primo")
+  senao
+     escreva("numero:",num," não é primo")
+  fimse
+Fimalgoritmo
+-----------------------------------------------------------------------------------
+7)
+Algoritmo "semnome"
+// Disciplina  :  [Linguagem e Lógica de Programação] 
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 02/09/2021
+funcao func_calculo(panos, pmeses, pdias : inteiro) : inteiro
+inicio
+  pdias <- pdias + panos * 365 + pmeses * 30
+  retorne(pdias)
+fimfuncao
+
+Var
+// Seção de Declarações das variáveis 
+  anos, meses, dias : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+  escreva("informe numero de anos:")
+  leia(anos)
+  escreva("informe numero de meses:")
+  leia(meses)
+  escreva("informe numero de dias:")
+  leia(dias)
+  dias <- func_calculo(anos,meses,dias)
+  escreva("idade em dias = ", dias)
+Fimalgoritmo
