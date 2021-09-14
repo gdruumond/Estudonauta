@@ -1,0 +1,247 @@
+============================================================================================
+QUESTÃO 01
+============================================================================================
+
+Algoritmo "semnome"
+funcao fun_fatorial (num1 : inteiro) : inteiro
+var
+   fatorial, i : inteiro
+inicio
+   fatorial <- 1
+   para i de 1 ate num1 faca
+      fatorial <- fatorial * i
+   fimpara
+   retorne(fatorial)
+fimfuncao
+
+Var
+   // Seção de Declarações das variáveis
+   num, fat, res, somafatorial : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   repita
+      escreva("Informe um número: ")
+      leia(num)
+      se num > 0 entao
+         fat <- fun_fatorial(num)
+         somafatorial <- somafatorial + fat
+      fimse
+   ate num < 0
+
+   escreva("A soma dos fatoriais dos números fornecidos é: ", somafatorial)
+
+Fimalgoritmo
+
+
+
+============================================================================================
+QUESTÃO 02
+============================================================================================
+
+Algoritmo "semnome"
+Tipo
+   reg_pessoa = registro
+      nome : caracter
+      altura : real
+   fimregistro
+
+procedimento proc_cadastro()
+var
+inicio
+   escreval()
+   escreval()
+   para i de 1 ate 15 faca
+      escreva("Escreva o nome da ",i,"º pessoa: ")
+      leia(pessoa[i].nome)
+      escreva("Escreva a altura da ",i,"º pessoa: ")
+      leia(pessoa[i].altura)
+   fimpara
+fimprocedimento
+
+procedimento proc_apresentar_menores()
+var
+inicio
+   c <- 0
+   escreval()
+   escreval()
+   escreval("Pessoas menores que 1.5m de altura: ")
+   para i de 1 ate 15 faca
+      se pessoa[i].altura < 1.5 entao
+         escreval(pessoa[i].nome)
+         c <- c + 1
+      fimse
+      se c = 0 entao
+         escreva("Nenhuma pessoa cadastrada menor que 1.5m")
+      fimse
+   fimpara
+fimprocedimento
+
+procedimento proc_apresentar_maiores()
+var
+inicio
+   c <- 0
+   escreval()
+   escreval()
+   escreval("Pessoas maiores que 1.5m de altura: ")
+   para i de 1 ate 15 faca
+      se pessoa[i].altura > 1.5 entao
+         escreval(pessoa[i].nome)
+         c <- c + 1
+      fimse
+   fimpara
+   se c = 0 entao
+      escreva("Nenhuma pessoa cadastrada maior que 1.5m")
+   fimse
+fimprocedimento
+
+procedimento proc_apresentar_todos()
+var
+inicio
+   escreval()
+   escreval()
+   escreval("Apresentar todos: ")
+   para i de 1 ate 15 faca
+      escreval("Nome: ", pessoa[i].nome," Altura: ", pessoa[i].altura, " metros")
+   fimpara
+fimprocedimento
+
+procedimento proc_media_das_alturas()
+var
+   soma, media : real
+inicio
+   escreval()
+   escreval()
+   para i de 1 ate 15 faca
+      soma <- soma + pessoa[i].altura
+      media <- soma / 15
+   fimpara
+   escreval("Média das alturas: ", media)
+fimprocedimento
+
+Var
+   // Seção de Declarações das variáveis
+   pessoa : vetor[1..15] de reg_pessoa
+   i, c, opcao : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   repita
+      escreval()
+      escreval()
+      escreval("------------------------------------")
+      escreval("Selecione uma das opções a baixo: ")
+      escreval("1- Cadastrar pessoas")
+      escreval("2- Apresentar pessoas cadastradas menores que 1.5 metro")
+      escreval("3- Apresentar pessoas cadastradas maiores que 1.5 metro")
+      escreval("4- Apresentar todas as pessoas cadastradas")
+      escreval("5- Apresentar médias das alturas cadastradas")
+      escreval("6- Encerrar o programa")
+      escreval("------------------------------------")
+      leia(opcao)
+      se (opcao > 6) ou (opcao < 1) entao
+         escreval("Opção inválida!")
+         escreval("Selecione um novo número: ")
+         leia(opcao)
+      fimse
+      escolha opcao
+      caso 1
+         proc_cadastro()
+      caso 2
+         proc_apresentar_menores()
+      caso 3
+         proc_apresentar_maiores()
+      caso 4
+         proc_apresentar_todos()
+      caso 5
+         proc_media_das_alturas()
+      fimescolha
+   ate (opcao = 6)
+Fimalgoritmo
+
+
+
+============================================================================================
+QUESTÃO 03
+============================================================================================
+
+Algoritmo "semnome"
+
+funcao fun_ler_dez_retorna_menor() : inteiro
+var
+inicio
+   para i de 1 ate 10 faca
+      escreva("Informe o ",i,"º valor: ")
+      leia(num1[i])
+   fimpara
+   para i de 1 ate 9 faca
+      para j de i+1 ate 10 faca
+         se (num1[i] > num1[j]) entao
+            aux <- num1[i]
+            num1[i] <- num1[j]
+            num1[j] <- aux
+         fimse
+      fimpara
+   fimpara
+   retorne(num1[1])
+fimfuncao
+
+funcao fun_ler_tres_retorna_maior() : inteiro
+var
+a, b, c : inteiro
+inicio
+   escreva("Informe 1º valor: ")
+   leia(a)
+   escreva("Informe 2º valor: ")
+   leia(b)
+   escreva("Informe 3º valor: ")
+   leia(c)
+   se (a > b) entao
+      se (a > c) entao
+         retorne(a)
+      fimse
+   senao
+   fimse
+   se (b > a) entao
+      se (b > c) entao
+         retorne(b)
+      fimse
+   fimse
+   se (c > a) entao
+      se (c > b) entao
+         retorne(c)
+      fimse
+   fimse
+fimfuncao
+
+Var
+   // Seção de Declarações das variáveis
+   res1, res2, i, j, opcao, aux : inteiro
+   num1 : vetor[1..10] de inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   repita
+      escreval()
+      escreval("------------------------------------")
+      escreval("Selecione uma das opções a baixo: ")
+      escreval("1- Leitura de 10 números, retornarei o menor deles")
+      escreval("2- Leitura de 3 números, retornarei o maior deles")
+      escreval("3- Encerrar o programa")
+      escreval("------------------------------------")
+      leia(opcao)
+      se (opcao > 3) ou (opcao < 1) entao
+         escreval("Opção inválida!")
+         escreval("Selecione um novo número: ")
+         leia(opcao)
+      fimse
+      escolha opcao
+      caso 1
+         res1 <- fun_ler_dez_retorna_menor()
+         escreval("Menor valor informado: ", res1)
+      caso 2
+         res2 <- fun_ler_tres_retorna_maior()
+         escreval("Maior valor informado: ", res2)
+      fimescolha
+   ate (opcao = 3)
+Fimalgoritmo

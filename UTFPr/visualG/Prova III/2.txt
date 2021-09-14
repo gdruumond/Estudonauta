@@ -1,0 +1,119 @@
+Algoritmo "semnome"
+Tipo
+   reg_pessoa = registro
+      nome : caracter
+      altura : real
+   fimregistro
+
+procedimento proc_cadastro()
+var
+inicio
+   escreval()
+   escreval()
+   para i de 1 ate 15 faca
+      escreva("Escreva o nome da ",i,"º pessoa: ")
+      leia(pessoa[i].nome)
+      escreva("Escreva a altura da ",i,"º pessoa: ")
+      leia(pessoa[i].altura)
+   fimpara
+fimprocedimento
+
+procedimento proc_apresentar_menores()
+var
+inicio
+   c <- 0
+   escreval()
+   escreval()
+   escreval("Pessoas menores que 1.5m de altura: ")
+   para i de 1 ate 15 faca
+      se pessoa[i].altura < 1.5 entao
+         escreval(pessoa[i].nome)
+         c <- c + 1
+      fimse
+      se c = 0 entao
+         escreva("Nenhuma pessoa cadastrada menor que 1.5m")
+      fimse
+   fimpara
+fimprocedimento
+
+procedimento proc_apresentar_maiores()
+var
+inicio
+   c <- 0
+   escreval()
+   escreval()
+   escreval("Pessoas maiores que 1.5m de altura: ")
+   para i de 1 ate 15 faca
+      se pessoa[i].altura > 1.5 entao
+         escreval(pessoa[i].nome)
+         c <- c + 1
+      fimse
+   fimpara
+   se c = 0 entao
+      escreva("Nenhuma pessoa cadastrada maior que 1.5m")
+   fimse
+fimprocedimento
+
+procedimento proc_apresentar_todos()
+var
+inicio
+   escreval()
+   escreval()
+   escreval("Apresentar todos: ")
+   para i de 1 ate 15 faca
+      escreval("Nome: ", pessoa[i].nome," Altura: ", pessoa[i].altura, " metros")
+   fimpara
+fimprocedimento
+
+procedimento proc_media_das_alturas()
+var
+   soma, media : real
+inicio
+   escreval()
+   escreval()
+   para i de 1 ate 15 faca
+      soma <- soma + pessoa[i].altura
+      media <- soma / 15
+   fimpara
+   escreval("Média das alturas: ", media)
+fimprocedimento
+
+Var
+   // Seção de Declarações das variáveis
+   pessoa : vetor[1..15] de reg_pessoa
+   i, c, opcao : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   repita
+      escreval()
+      escreval()
+      escreval("------------------------------------")
+      escreval("Selecione uma das opções a baixo: ")
+      escreval("1- Cadastrar pessoas")
+      escreval("2- Apresentar pessoas cadastradas menores que 1.5 metro")
+      escreval("3- Apresentar pessoas cadastradas maiores que 1.5 metro")
+      escreval("4- Apresentar todas as pessoas cadastradas")
+      escreval("5- Apresentar médias das alturas cadastradas")
+      escreval("6- Encerrar o programa")
+      escreval("------------------------------------")
+      leia(opcao)
+      se (opcao > 6) ou (opcao < 1) entao
+         escreval("Opção inválida!")
+         escreval("Selecione um novo número: ")
+         leia(opcao)
+      fimse
+      escolha opcao
+      caso 1
+         proc_cadastro()
+      caso 2
+         proc_apresentar_menores()
+      caso 3
+         proc_apresentar_maiores()
+      caso 4
+         proc_apresentar_todos()
+      caso 5
+         proc_media_das_alturas()
+      fimescolha
+   ate (opcao = 6)
+Fimalgoritmo

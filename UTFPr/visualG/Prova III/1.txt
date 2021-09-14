@@ -1,0 +1,30 @@
+Algoritmo "semnome"
+funcao fun_fatorial (num1 : inteiro) : inteiro
+var
+   fatorial, i : inteiro
+inicio
+   fatorial <- 1
+   para i de 1 ate num1 faca
+      fatorial <- fatorial * i
+   fimpara
+   retorne(fatorial)
+fimfuncao
+
+Var
+   // Seção de Declarações das variáveis
+   num, fat, res, somafatorial : inteiro
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   repita
+      escreva("Informe um número: ")
+      leia(num)
+      se num > 0 entao
+         fat <- fun_fatorial(num)
+         somafatorial <- somafatorial + fat
+      fimse
+   ate num < 0
+
+   escreva("A soma dos fatoriais dos números fornecidos é: ", somafatorial)
+
+Fimalgoritmo
