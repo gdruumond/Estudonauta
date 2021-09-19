@@ -41,9 +41,9 @@ function adicionar() {
 }
 
 // Analisa os dados inseridos e retorna o resultado da analise
-function analizar(){
+function analisar(){
     if (valor.length == 0) {
-        p.innerHTML = 'Adicione valores antes de analizar'
+        p.innerHTML = 'Adicione valores antes de analisar'
     } else {
 
     let maior = valor[0]
