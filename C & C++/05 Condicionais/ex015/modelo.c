@@ -14,7 +14,7 @@ void main(){
     media = (n1 + n2) / 2;
 
     if (media>=8){
-        printf("Meus parábens!");
+        printf("Meus parabÃ©ns! ");
     }
-    printf("A sua média final foi %.2f", media);
+    printf("A sua mÃ©dia final foi %.2f", media);
 }

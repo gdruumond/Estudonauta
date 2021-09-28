@@ -13,18 +13,18 @@ void main(){
     int anonasc, idade;
 
     printf("Atualmente estamos no ano de %i.", anohoje);
-    printf("\nEm que ano você nasceu? ");
+    printf("\nEm que ano vocÃª nasceu? ");
     scanf("%i", &anonasc);
 
     idade = anohoje - anonasc;
 
-    printf("Sua idade atual é de %i", idade);
+    printf("Sua idade atual ï¿½ de %i", idade);
 
     if(idade > 18){
-        printf("\nVocê já completou 18 anos, então ja deve ter se alistado");
+        printf("\nVocï¿½ jï¿½ completou 18 anos, entï¿½o ja deve ter se alistado");
     } else if(idade < 18){
-        printf("\nVocê ainda não completou 18 anos, então, não precisa se alistar");
+        printf("\nVocï¿½ ainda nï¿½o completou 18 anos, entï¿½o, nï¿½o precisa se alistar");
     } else{
-        printf("\nVocê completa 18 anos este ano, e precisa ir se alistar");
+        printf("\nVocï¿½ completa 18 anos este ano, e precisa ir se alistar");
     }
 }
