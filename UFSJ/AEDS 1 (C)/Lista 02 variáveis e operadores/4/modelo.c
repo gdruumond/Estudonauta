@@ -5,7 +5,7 @@ void main(){
 
     const float PI = 3.14159265359;
 
-    printf("Raio da circunferência: ");
+    printf("Raio da circunferência ççç: ");
     scanf("%f", &raio);
 
     area = 4 * PI * raio;
