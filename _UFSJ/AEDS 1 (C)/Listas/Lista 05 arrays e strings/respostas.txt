@@ -1,0 +1,3 @@
+Pois o scanf precisa do endereço da variável para atribuir valor à variavel, e o nome array por si já é o endereço da variável, então não é necessário colocar o operador de endereço "&"
+
+O programa encontra o elemento, indo buscar na memória o primeiro elemento do vetor, mais o indice indicado multiplicado pela quantidade de endereços que uma elemento ocupa em memória. Ou seja, se você busca o elemento indice 3, o programa vai iniciar a busca no elemento indice 0 e soma 3 endereços, chegando então no elemento indice 2.
