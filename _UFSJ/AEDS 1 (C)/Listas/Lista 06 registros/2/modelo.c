@@ -3,7 +3,7 @@
 #include<math.h>
 
 typedef struct{
-    float x, y;
+    double x, y;
 } ponto;
 
 typedef struct{
@@ -12,12 +12,12 @@ typedef struct{
 
 void main(){
     retangulo pt_ret;
-    float diagonal, area, perimetro, base, altura;
+    double diagonal, area, perimetro, base, altura;
 
     printf("Ponto superior esquerdo do triangulo (x, y): ");
-    scanf("%f %f", &pt_ret.sEsq.x, &pt_ret.sEsq.y);
+    scanf("%lf %lf", &pt_ret.sEsq.x, &pt_ret.sEsq.y);
     printf("Ponto inferior direito do triangulo (x, y): ");
-    scanf("%f %f", &pt_ret.iDir.x, &pt_ret.iDir.y);
+    scanf("%lf %lf", &pt_ret.iDir.x, &pt_ret.iDir.y);
 
     base = pt_ret.sEsq.x - pt_ret.iDir.x;
     altura = pt_ret.sEsq.y - pt_ret.iDir.y;
@@ -29,6 +29,6 @@ void main(){
     area = base * altura;
     perimetro = 2*(base + altura);
 
-    printf("\nBase: %.1f Altura: %.1f", base, altura);
-    printf("\nArea: %.1f\nDiagonal: %.1f\nPerimetro: %.1f", area, diagonal, perimetro);
+    printf("\nBase: %.1lf Altura: %.1lf", base, altura);
+    printf("\nArea: %.1lf\nDiagonal: %.1lf\nPerimetro: %.1lf", area, diagonal, perimetro);
 }

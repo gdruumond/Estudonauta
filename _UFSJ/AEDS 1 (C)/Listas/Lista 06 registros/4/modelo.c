@@ -3,12 +3,12 @@
 #define qtd_acessorio 2
 
 typedef struct{
-    char nome[50];
+    char nome[20];
     float valor;
 } acessorio;
 
 typedef struct{
-    char nome[50];
+    char nome[20];
     float valor;
     acessorio acessorio[qtd_acessorio];
 } carro;
