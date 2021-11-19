@@ -1,18 +1,18 @@
 #include<stdio.h>
 #include<string.h>
 
-int primo(int x){
-    if(x==1 || x==2) return 1;
-    for(int i=2; i< x/2; i++){
-        if(x%i==0) return 0;
-        else return 1;
-    }
+int primo(int, int);
+void main();
+
+int primo(int x, int d){
+    if (d > x/2) return 1;
+    if (x % d == 0) return 0;
+    return primo(x, d+1);
 }
 
 void main(){
     int x;
-
-    printf("Numero: ");
+    printf("Digite um numero: ");
     scanf("%d", &x);
-    printf("%d %sé primo", x, primo(x)?"":"nao");
+    printf("%d%s eh primo", x, primo(x,2)?"":" nao");
 }

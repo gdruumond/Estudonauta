@@ -1,20 +1,27 @@
 #include<stdio.h>
 #include<string.h>
 
-int funcao(int int1, int int2){
-    if(int1 == int2) return int2;
-    return int1 * funcao(int1+1, int2);
+int funcao(int a, int b){
+    if(a == b) return b;
+    return a * funcao(a+1, b);
 }
 /*
-1 2 3 4 5 6
-(2 3 4 5)
-2 (3 4 5)
-2 (3 (4 5))
-2 (3 (4 (5)))  
+1 2 3 4
+1 (2 3 4)
+1 (2 (3 4)
+1 (2 (3 (4))
+1 (2 (12))
+1 (24)
+24
 */
 void main(){
-    int a, b;
+    int a, b, aux;
     printf("Digite dois inteiros: ");
     scanf("%d %d", &a, &b);
+    if(a>b){
+        aux = b;
+        b = a;
+        a = aux;
+    }
     printf("%d", funcao(a,b));
 }
