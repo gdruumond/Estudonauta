@@ -4,22 +4,21 @@
 /*
 Crie uma função que recebe uma string e um caractere e retorna a posição
 do caractere se ele existir na string, ou -1 caso ele não exista na
-string. Crie uma função que recebe duas strings e retorna 1 se a primeira
+string. 
+Crie uma função que recebe duas strings e retorna 1 se a primeira
 for uma substring da segunda ou 0, caso contrário. Utilize a primeira
-função para implementar a segunda. Crie um programa que solicite duas
-strings e verifica se a primeira é uma substring da segunda.
+função para implementar a segunda. 
+Crie um programa que solicite duas strings e verifica se a primeira é uma substring da segunda.
 */
-
 #define MAXTAM 50
 
 int buscaLetra(char *str, char caractere){ // Funcao para buscar a primeira aparicao da letra que o usuario quer
     int Id = -1;
-    for (int i = 0; i < strlen(str); i++){
+    for (int i = 0; i < strlen(str); i++)
         if (str[i] == caractere){
             Id = i;
             break;
         }
-    }
     return Id;
 }
 
@@ -96,9 +95,8 @@ função para implementar a segunda. */
 int substring(char *str1, char *str2){ // Crie um programa que solicite duas strings e verifica se a primeira é uma substring da segunda.
     int i, k = 0, verifica = 0, diferenca1 = 0, diferenca2 = 0, teste = 1, retorno = -1;
 
-    if (strlen(str1) < strlen(str2)){
+    if (strlen(str1) < strlen(str2))
         teste = 0;
-    }
 
     if (teste){ // String1 maior que a string2
         for (i = 0; i < strlen(str1); i++){
@@ -119,7 +117,7 @@ int substring(char *str1, char *str2){ // Crie um programa que solicite duas str
             }
         }
 
-    }else{ // // String2 maior que string1 (Mesmo codigo e comentarios da parte de cima, so muda as comparacoes das strings)
+    }else{ // String2 maior que string1 (Mesmo codigo e comentarios da parte de cima, so muda as comparacoes das strings)
         for (i = 0; i < strlen(str2); i++){
             diferenca1 = i - verifica;
             if (str2[i] == str1[k]){ 
@@ -156,12 +154,10 @@ int main(){
     fgets(str1,MAXTAM,stdin); // Le uma string
 
     Id = buscaLetra(str1,caractere);
-    if (Id != -1){
+    if (Id != -1)
         printf ("\nO caractere \"%c\" esta na posicao %i da palavra: %s",caractere,Id,str1);
-    }else{
+    else
         printf ("\nO caractere nao esta na palavra.\n");
-    }
-
 
     printf("\n______________ PARTE 2 DO PROGRAMA ___________________\n\n");
     str1 = (char*)calloc(MAXTAM,sizeof(char));
@@ -174,11 +170,8 @@ int main(){
     setbuf(stdin,NULL);
     fgets(str2,MAXTAM,stdin);
 
-
     retorno = verifica(str1, str2);
-    if (retorno == -1){
-        printf ("\nUma string não é substring da outra!\n");
-    }
+    if (retorno == -1) printf ("\nUma string não é substring da outra!\n");
 
     printf("\n______________ PARTE 3 DO PROGRAMA ___________________\n\n");
     str1 = (char*)calloc(MAXTAM,sizeof(char));
@@ -192,7 +185,5 @@ int main(){
     fgets(str2, MAXTAM, stdin);
 
     retorno = substring(str1,str2);
-    if (retorno == -1){
-        printf ("As strings não sao substrings uma da outra.\n");
-    }
+    if (retorno == -1) printf ("As strings não sao substrings uma da outra.\n");
 }
