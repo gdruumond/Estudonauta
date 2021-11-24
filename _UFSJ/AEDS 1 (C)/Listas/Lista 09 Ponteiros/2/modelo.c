@@ -2,13 +2,13 @@
 #include<string.h>
 
 int fibonacci(int *ppa){
-    int n1 = 0, n2 = 1, next=1;
+    int n1 = 0, n2 = 1, next;
     for (int i = 2; i<= *ppa; i++){
         next = n1 + n2;
         n1 = n2;
         n2 = next; 
     }
-    return next;
+    return n1;
 }
 
 void main(){
@@ -16,6 +16,6 @@ void main(){
     pa = &a;
 
     printf("Digite um inteiro: ");
-    scanf("%d", &a);
-    printf("O %do elemento da sequencia de fibonacci eh: %d", *pa, fibonacci(&a));
+    scanf("%d", pa);
+    printf("O %do elemento da sequencia de fibonacci eh: %d", *pa, fibonacci(pa));
 }
