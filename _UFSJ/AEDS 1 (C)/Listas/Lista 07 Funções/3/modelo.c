@@ -2,14 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 /*
-Crie uma função que recebe uma string e um caractere e retorna a posição
-do caractere se ele existir na string, ou -1 caso ele não exista na
+Crie uma função que recebe uma string e um caractere e retorna a posição do caractere se ele existir na string, ou -1 caso ele não exista na
 string. 
 Crie uma função que recebe duas strings e retorna 1 se a primeira
 for uma substring da segunda ou 0, caso contrário. Utilize a primeira
 função para implementar a segunda. 
-Crie um programa que solicite duas strings e verifica se a primeira é uma substring da segunda.
-*/
+Crie um programa que solicite duas strings e verifica se a primeira é uma substring da segunda. */
 #define MAXTAM 50
 
 int buscaLetra(char *str, char caractere){ // Funcao para buscar a primeira aparicao da letra que o usuario quer
