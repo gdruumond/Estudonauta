@@ -1,6 +1,14 @@
+/*
+Autores do arquivo:
+    - Gabriel Augusto Drumond
+    - Rian Wagner Costa 
+*/
+
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#define MAXTAM 50
+#define TARRAY 20
 
 // Diretivas
 void imprimeDono(Dono*);
@@ -17,6 +25,7 @@ void agendarConsulta(Consulta[], int*, Animal[], Veterinario[], int, int);
 void visualizarAgenda(Consulta[], int);
 void main();
 
+    // Inicio Questão 01
 typedef struct{
     char *nome;
     char *telefone;
@@ -40,7 +49,9 @@ typedef struct{
     Animal *animal;
     Veterinario *veterinario;
 } Consulta;
+    // Fim Questão 01
 
+    // Inicio Questão 02
 void imprimeDono(Dono *dono){
     printf("\n>>Dados do Dono<<");
     printf("\nNome: %s");
@@ -59,7 +70,9 @@ void imprimeAnimal(Animal *animal){
     printf("\nIdade: %s");
     printf("\nPeso: %.2f",);
 }
+    // Fim Questão 02
 
+    // Inicio Questão 03
 int buscarDono(Dono donos[], int qtdDonos, char *nomeDoDono){
     /* recebe o array de donos, a quantidade de donos cadastrados(int)e o nome do dono que se deseja encontrar(string)
     Esta função procura no array o dono que possui o nome passado 
@@ -83,7 +96,9 @@ int buscarVeterinario(Veterinario veterinarios[], int qtdVeterinarios, char *nom
 
     return pos;
 }
+    // Fim Questão 03
 
+    // Inicio Questão 04
 void cadastrarDono(Dono donos[], int *qtdDonos){
     /* 
     verifica se o array donos está cheio
@@ -95,7 +110,9 @@ void cadastrarDono(Dono donos[], int *qtdDonos){
 void cadastrarVeterinario(Veterinario veterinarios[], int *qtdVeterinarios){
     // mesma lógica do cadastrarDono
 }
+    // Fim Questão 04
 
+    // Inicio Questão 05
 void cadastrarAnimal(Animal animais[], int *qtdAnimais, Dono donos[], int qtdDonos){
     /*
     Verifica se o array está cheio
@@ -105,13 +122,18 @@ void cadastrarAnimal(Animal animais[], int *qtdAnimais, Dono donos[], int qtdDon
         Caso encontre o dono, a função solicita os demais dados do animal, armazenando tudo no array de animais e atualiza a quantidade de animais cadastrados
     */
 }
+    // Fim Questão 05
 
+
+    // Inicio Questão 06
 int horarioDisponivel(Consulta consultas[], int qtdConsultas, char *data, int horario){ // DEVE SER FUNÇÃO RECURSIVA
     // Verifica se existe uma consulta marcada na data e horário passados e retorna:
     // 1, se não existir
     // 0, se já exista
 }
+    // Inicio Questão 06
 
+    // Inicio Questão 07
 void agendarConsulta(Consulta consultas[], int *qtdConsultas, Animal animais[], Veterinario veterinarios[], int qtdAnimais, int qtdVeterinarios){
     /* verifica se o array de animais está cheio
         caso afirmativo, avisa que não pode cadastrar e encerra
@@ -123,13 +145,17 @@ void agendarConsulta(Consulta consultas[], int *qtdConsultas, Animal animais[], 
                     Caso tenha sido encontrado um horário disponível, a função deve armazenar todos os dados no array de consultas e atualizar a quantidade de consultas cadastradas
     */
 }
+    // Fim Questão 07
 
+    // Inicio Questão 08
 void visualizarAgenda(Consulta consultas[], int qtdConsultas){
     // Esta função solicita uma data (string) e imprime a data,hora e os nomes do veterinário, animal e donodas consultas naqueladata, conforme o exemplo mostrado abaixo em que aparecem 2 consultas.
 
 
 }
+    // Fim Questão 08
 
+    // Inicio Questão 09
 void main(){
     /* Implemente  a  função  main,  em  que  são  declarados  os  arrays  de  donos,  animais,  veterinários e  consultas. 
     A função apresenta um menu que possui as opções (a ordem não importa): sair, cadastrar dono, cadastrar animal, cadastrar veterinário, buscar dono, buscaranimal, buscar veterinário, agendar consulta e visualizar consultas do dia. 
@@ -138,4 +164,73 @@ void main(){
     Após a impressão resultante das buscas e da agenda de consultas, o programa deve pausar. 
     Para isso, use a função system(“PAUSE”); da biblioteca stdlib.h. 
     */
+   Dono donos[1];
+   Animal animais[1];
+   Veterinario veterinairos[1];
+   Consulta consultas[1];
+   int resp;
+
+    do{
+        printf("\n\n**************************************");
+        printf("\t\t\t>>DIGITE A OPÇÃO<<");
+        printf("\n| Sair...........................: 0 |");
+        printf("\n| Cadastrar dono.................: 1 |");
+        printf("\n| Cadastrar animal...............: 2 |");
+        printf("\n| Cadastrar veterinario..........: 3 |");
+        printf("\n| Buscar dono....................: 4 |");
+        printf("\n| Buscar animal..................: 5 |");
+        printf("\n| Buscar veterinario.............: 6 |");
+        printf("\n| Agendar consulta...............: 7 |");
+        printf("\n| Visualizar agenda do dia....: 8 |");
+        printf("\n| Opção selecionada: ");
+        scanf("%d", &resp);
+        printf("\n**************************************\n\n");
+        switch (resp){
+            case 0:
+                break;    
+
+            case 1:
+                cadastrarDono();
+                break;
+            
+            case 2:
+                cadastrarAnimal();
+                break;
+
+            case 3:
+                cadastrarVeterinario;
+                break;
+
+            case 4:
+                buscarDono();
+                break;    
+
+            case 5:
+                buscarAnimal();
+                break;    
+
+            case 6:
+                buscarVeterinario();
+                break;    
+
+            case 7:
+                agendarConsulta();
+                break;    
+
+            case 8:
+                visualizarAgenda();
+                break;    
+
+            default:
+                printf("\n>>> Por favor, digite uma opção válida <<<");
+        }
+
+    }while (resp != 0);
 }
+    // Fim Questão 05
+
+
+    /* OBSERVAÇÕES IMPORTANTES:
+        -> liberar as variaveis dinamicas free(__variavel)
+        -> usar o system("PAUSE") aonde o professor pediu
+    */
