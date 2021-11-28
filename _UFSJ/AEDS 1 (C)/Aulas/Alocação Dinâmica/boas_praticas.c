@@ -18,7 +18,18 @@ typedef struct{
     int idade;
 } teste;
 
-void stringDinamicaStruct(){
-    teste *oi = (teste*) malloc(sizeof(teste));
-    oi->nome = (char*) calloc(20, sizeof(char));
+void StructArrayStringDinamica(){
+    int n;
+
+    teste *oi = (teste*) malloc(n * sizeof(teste));
+
+    // alocando dinamicamente strings dentro de um array dinamico
+    for(int i=0; i<n; i++)
+        oi[i].nome = (char*) calloc(20, sizeof(char));
+
+    // liberando espaço alocado dinamicamente das strings
+    for(int i=0; i<n; i++)
+        free(oi[i].nome);
+
+    free(oi);    
 }
