@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 
+// Coloca array de strings em ordem alfabetica
 void main(){
     // nome[5][20] -> 5 strings com max. 20 caracteres
     char nome[5][20], aux[20];

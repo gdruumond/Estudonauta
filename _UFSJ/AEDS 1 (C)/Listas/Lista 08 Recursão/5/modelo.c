@@ -6,14 +6,16 @@ typedef struct{
 } produto;
 
 float somaProdutos(produto produto[], int tamanho){
-    if(tamanho == 0) return 0;
+    if(tamanho == 0) 
+        return 0;
     return produto[tamanho-1].valor + somaProdutos(produto, tamanho-1);
 }
 
 produto maisBarato(produto produto[], int tamanho, int indiceMaisBarato){
-    if(tamanho == 0) return produto[indiceMaisBarato];
+    if(tamanho == 0) 
+        return produto[indiceMaisBarato];
     if(produto[tamanho-1].valor < produto[indiceMaisBarato].valor) indiceMaisBarato = tamanho - 1;
-    return maisBarato(produto, tamanho-1, indiceMaisBarato);
+        return maisBarato(produto, tamanho-1, indiceMaisBarato);
 }
 
 void imprimeUmProduto(produto produto){

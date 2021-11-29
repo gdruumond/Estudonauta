@@ -5,17 +5,16 @@
 #include<stdio.h>
 #define T 5 
 
-void main();
-void ordena(int[]);
 int posicaoMenorElemento(int[], int);
+void ordena(int[]);
+void main();
 
-void main(){
-    
-    int a[T];
-
-    for(int i=0; i<T; i++) scanf("%d", &a[i]);
-    ordena(a);
-    for(int i=0; i<T; i++) printf("%d ", a[i]);
+int posicaoMenorElemento(int a[], int i){
+    int menor = i;
+    for(int p = i+1; p<T; p++)
+        if(a[p] < a[i])
+            menor = p;
+    return menor;
 }
 
 void ordena(int a[]){
@@ -28,10 +27,13 @@ void ordena(int a[]){
     }
 }
 
-int posicaoMenorElemento(int a[], int i){
-    int menor = i;
-    for(int p = i+1; p<T; p++)
-        if(a[p] < a[i])
-            menor = p;
-    return menor;
+
+void main(){
+    int a[T];
+
+    for(int i=0; i<T; i++) 
+        scanf("%d", &a[i]);
+    ordena(a);
+    for(int i=0; i<T; i++) 
+        printf("%d ", a[i]);
 }
