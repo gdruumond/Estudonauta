@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 void main(){
-    int tam;
+    int tam; 
     char *str;
 
     printf("Tamanho do vetor: ");

@@ -8,34 +8,9 @@ typedef struct{
     int RA;
 } Aluno;
 
-// Recebe qualquer ponteiro, e retorna se a alocação foi sucedida ou não
-/* void erroAlocacao(void *ponteiro){   
-    if(ponteiro == NULL){
-        printf("Erro na alocação de memória");
-        exit(1);
-    }
-} */
-
-// verifica se a alocação do ponteiro tipo Aluno deu certo
-void erroAlocacaoAluno(Aluno *ponteiro){   
-    if(ponteiro == NULL){ 
-        printf("Erro na alocação de memória");
-        exit(1);
-    }
-}
-
-// verifica se a alocação do ponteiro tipo char deu certo
-void erroAlocacaoChar(char *ponteiro){   
-    if(ponteiro == NULL){ 
-        printf("Erro na alocação de memória");
-        exit(1);
-    }
-}
-
 void main(){
     int resp, i = 0;
     Aluno *aluno = (Aluno*)calloc(i, sizeof(Aluno));
-        erroAlocacaoAluno(aluno);
 
     do{
         printf("\n---------------------------------\n");
@@ -51,15 +26,14 @@ void main(){
             exit(1);
         
         case 1:
-            i++;
             aluno = realloc(aluno, i * sizeof(Aluno)); // aumenta o vetor aluno
-            aluno[i-1].nome = (char*)calloc(MAX, sizeof(char)); // string alocada dinamicamente 
-                erroAlocacaoChar(aluno[i-1].nome);
+            aluno[i].nome = (char*)calloc(MAX, sizeof(char)); // string alocada dinamicamente 
             printf("\nNome: ");
             scanf(" "); // limpa buffer de entrada
-            gets(aluno[i-1].nome);
+            gets(aluno[i].nome);
             printf("RA: ");
-            scanf("%d", &aluno[i-1].RA);
+            scanf("%d", &aluno[i].RA);
+            i++;
             break;
 
         case 2:

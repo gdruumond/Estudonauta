@@ -74,15 +74,13 @@ int buscarDono(Dono donos[], int qtdDonos, char *nomeDoDono){
     Esta função procura no array o dono que possui o nome passado 
         e retorna o índice (int) dele no array
         caso não encontre, a função retorna -1
-    Faça também as funções buscarAnimal e buscarVeterinario seguindo a mesma lógica.
     */
    int j;
 
    for(int i=0; i<qtdDonos; i++){
        if(donos[i].nome == nomeDoDono){
            return i;
-       }
-   } else{
+       } else{
        j++;
    } 
 
@@ -98,8 +96,7 @@ int buscarAnimal(Animal animais[], int qtdAnimais, char *nomeDoAnimal){
    for(int i=0; i<qtdAnimais; i++){
        if(animais[i].nome == nomeDoAnimal){
            return i;
-       }
-   } else{
+       } else{
        j++;
    } 
 
@@ -114,8 +111,7 @@ int buscarVeterinario(Veterinario veterinarios[], int qtdVeterinarios, char *nom
    for(int i=0; i<qtdVeterinarios; i++){
        if(veterinarios[i].nome == nomeDoVeterinario){
            return i;
-       }
-   } else{
+       } else{
        j++;
    } 
 
@@ -273,12 +269,12 @@ void agendarConsulta(Consulta consultas[], int *qtdConsultas, Animal animais[], 
                     Caso tenha sido encontrado um horário disponível, a função deve armazenar todos os dados no array de consultas e atualizar a quantidade de consultas cadastradas
     */
     int ultimoAnimal, ultimaConsulta, ultimoVeterinario;
-    int contadorAnimal, contatorConsulta, contadorVeterinario
-    int contador2, contador3, resp, resp2 = 0, horaConsulta;
+    int contadorAnimal, contadorConsulta, contadorVeterinario;
+    int contador, contador2, contador3, resp, resp2 = 0, horaConsulta, horaVaga;
     int posicaoAnimal; posicaoVeterinario;
     char *nome_doVeterinario = (char*)calloc(MAXTAM, sizeof(char));
-    char *nome_doAnimal = (char*)calloc(MAXTAM, sizeof(char);
-    char *dataConsulta = (char*)calloc(MAXTAM, sizeof(char);
+    char *nome_doAnimal = (char*)calloc(MAXTAM, sizeof(char));
+    char *dataConsulta = (char*)calloc(MAXTAM, sizeof(char));
 
     for(int i=0; i<TARRAY; i++){
         if (animais[i].nome != NULL){
@@ -401,7 +397,7 @@ void visualizarAgenda(Consulta consultas[], int qtdConsultas, Animal animais[]){
     printf("\n\t>> Agenda <<");
     printf("\n| Data da consulta: ");
     scanf(" ");
-    gets(dataAgenda);
+    gets(data_Agenda);
 
     for(int i=0; i<qtdConsultas; i++){
         if(consultas[i].data == data_Agenda){
@@ -460,19 +456,19 @@ void main(){
             case 0:
             break;    
 
-            case 1:  // OK
+            case 1:
                 cadastrarDono(donos, qtdDonos);
             break;
             
-            case 2: // OK
+            case 2:
                 cadastrarAnimal(animais, qtdAnimais, donos, qtd_Donos);
             break;
 
-            case 3:  // OK
+            case 3:
                 cadastrarVeterinario(veterinarios, qtdVeterinarios);
             break;
 
-            case 4:   // OK
+            case 4:
                 char nome_doDono = (char*) calloc(MAXTAM, sizeof(char));
 
                 printf("\n>> Buscar Dono << ");
@@ -490,7 +486,7 @@ void main(){
                     printf("\n| Dono \"%s\" nao encontrado no array: %d", nome_doDono, DonoNoArray);
             break;    
 
-            case 5:  // OK
+            case 5:
                 char nome_doAnimal = (char*) calloc(MAXTAM, sizeof(char));
 
                 printf("\n>> Buscar Animal << ");
@@ -508,7 +504,7 @@ void main(){
                     printf("\n| Animal \"%s\" nao encontrado no array: %d", nome_doAnimal, AnimalNoArray);
             break;    
 
-            case 6:   // OK
+            case 6:
                 char nome_doVeterinario = (char*) calloc(MAXTAM, sizeof(char));
 
                 printf("\n>> Buscar Dono << ");
@@ -526,7 +522,7 @@ void main(){
                     printf("\n| Veterinario \"%s\" nao encontrado no array: %d", nome_doVeterinario, VeterinarioNoArray);
             break;    
 
-            case 7: // OK
+            case 7:
                 char *data = (char*)calloc(MAXTAM, sizeof(char));
                 char *horario = (char*)calloc(MAXTAM, sizeof(char));
 
@@ -534,8 +530,8 @@ void main(){
                 agendarConsulta(consultas, qtdConsultas, animais, veterinarios, qtd_Animais, qtd_Veterinarios);
             break;    
 
-            case 8: // OK
-                visualizarAgenda(consultas, qtd_Consultas);
+            case 8:
+                visualizarAgenda(consultas, qtd_Consultas, animais);
                 printf("\n\n*****************************");
                 system("PAUSE");
             break;    
