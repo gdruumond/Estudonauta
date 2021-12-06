@@ -33,7 +33,7 @@ typedef struct{
     Veterinario *veterinario;
 } Consulta; // Fim Questão 01
     
-void imprimeDono(Dono*);
+void imprimeDono(Dono);
 void imprimeVeterinario(Veterinario*);
 void imprimeAnimal(Animal*);
 int buscarDono(Dono[], int, char*);
@@ -42,16 +42,16 @@ int buscarVeterinario(Veterinario[], int, char*);
 void cadastrarDono(Dono[], int*);
 void cadastrarVeterinario(Veterinario[], int*);
 void cadastrarAnimal(Animal[], int*, Dono[], int);
-int horarioDisponivel(Consulta[], int, char*, int, int);
+int horarioDisponivel(Consulta[], int*, char*, int, int);
 void agendarConsulta(Consulta[], int*, Animal[], Veterinario[], int, int);
 void visualizarAgenda(Consulta[], int, Animal[]);
 void main();
 
     // Inicio Questão 02
-void imprimeDono(Dono *dono){
+void imprimeDono(Dono dono){
     printf("\n\n\t>> Dados do Dono <<");
-    printf("\n| Nome: %s", dono->nome);
-    printf("\n| Telefone: %s\n", dono->telefone);
+    printf("\n| Nome: %s", dono.nome);
+    printf("\n| Telefone: %s\n", dono.telefone);
 }
 
 void imprimeVeterinario(Veterinario *veterinario){
@@ -75,23 +75,23 @@ int buscarDono(Dono donos[], int qtdDonos, char *nomeDoDono){
         e retorna o índice (int) dele no array
         caso não encontre, a função retorna -1
     */
-   int j=0;
+    int j=0;
 
-   for(int i=0; i<qtdDonos; i++)
-       if(donos[i].nome == nomeDoDono)
-            return i;
-       else
-            j++;
+    for(int i=0; i<qtdDonos; i++)
+        if(strcmp(donos[i].nome, nomeDoDono) == 0)
+                return i;
+        else
+                j++;
 
-    if(j==qtdDonos)
-        return -1;
+        if(j==qtdDonos)
+            return -1;
 }
 
-int buscarAnimal(Animal animais[], int qtdAnimais, char *nomeDoAnimal){
+int buscarAnimal(Animal animais[], int qtdAnimais, char* nomeDoAnimal){
     int j=0;
 
     for(int i=0; i<qtdAnimais; i++)
-        if(animais[i].nome == nomeDoAnimal)
+        if(strcmp(animais[i].nome, nomeDoAnimal) == 0)
            return i;
         else
             j++;
@@ -100,18 +100,18 @@ int buscarAnimal(Animal animais[], int qtdAnimais, char *nomeDoAnimal){
         return -1;
 }
 
-int buscarVeterinario(Veterinario veterinarios[], int qtdVeterinarios, char *nomeDoVeterinario){
+int buscarVeterinario(Veterinario veterinarios[], int qtdVeterinarios, char* nomeDoVeterinario){
     int j=0;
 
    for(int i=0; i<qtdVeterinarios; i++)
-       if(veterinarios[i].nome == nomeDoVeterinario)
+       if(strcmp(veterinarios[i].nome, nomeDoVeterinario) == 0)
              return i;
        else
             j++;
 
     if(j==qtdVeterinarios)
         return -1;
-}   // Fim Questão 03
+} // Fim questão 03
 
     // Inicio Questão 04
 void cadastrarDono(Dono donos[], int *qtdDonos){
@@ -224,11 +224,11 @@ void cadastrarAnimal(Animal animais[], int *qtdAnimais, Dono donos[], int qtdDon
 }   // Fim Questão 05
 
     // Inicio Questão 06
-int horarioDisponivel(Consulta consultas[], int qtdConsultas, char *data, int horario, int i){
-    if(consultas[i].data == data && consultas[i].horario == horario)
+int horarioDisponivel(Consulta consultas[], int *qtdConsultas, char *data, int horario, int i){
+    if(strcmp(consultas[i].data, data) == 0 && consultas[i].horario == horario)
         return 0;        
 
-    if (i == qtdConsultas)
+    if (i == *qtdConsultas)
         return 1; 
 
     if(consultas[i].data != data && consultas[i].horario != horario)
@@ -248,7 +248,7 @@ void agendarConsulta(Consulta consultas[], int *qtdConsultas, Animal animais[], 
     */
     int ultimoAnimal, ultimaConsulta, ultimoVeterinario;
     int contadorAnimal, contadorConsulta, contadorVeterinario;
-    int contador2, contador3, resp, resp2 = 0, horaConsulta, horaVaga;
+    int contador2, resp, resp2 = 0, horaConsulta, horaVaga;
     int posicaoAnimal=0;
     int posicaoVeterinario=0;
     char *nome_doVeterinario = (char*)calloc(MAXTAM, sizeof(char));
@@ -280,7 +280,7 @@ void agendarConsulta(Consulta consultas[], int *qtdConsultas, Animal animais[], 
         gets(nome_doVeterinario);
     
         for(int i=0; i<contadorVeterinario; i++)
-            if(veterinarios[i].nome != nome_doVeterinario)
+            if(strcmp(veterinarios[i].nome, nome_doVeterinario) != 0)
                 contador2++;
             else
                  posicaoVeterinario = i;
@@ -320,7 +320,7 @@ void agendarConsulta(Consulta consultas[], int *qtdConsultas, Animal animais[], 
                             printf("\n| Hora: ");
                             scanf("%d", horaConsulta);
 
-                            horaVaga = horarioDisponivel(consultas, *qtdConsultas, dataConsulta, horaConsulta, 0);
+                            horaVaga = horarioDisponivel(consultas, qtdConsultas, dataConsulta, horaConsulta, 0);
 
                             if(horaVaga){
                                 printf("\n\n|\t >> Consulta marcada!");
@@ -329,14 +329,17 @@ void agendarConsulta(Consulta consultas[], int *qtdConsultas, Animal animais[], 
                                 printf("\n| Animal: %s", nome_doAnimal);
                                 printf("\n| Veterinario: %s", nome_doVeterinario);
 
-                                consultas[ultimaConsulta+1].animal->dono = animais[posicaoAnimal].dono;
+                                consultas[ultimaConsulta+1].animal = &animais[posicaoAnimal];
+                                consultas[ultimaConsulta+1].veterinario = &veterinarios[posicaoVeterinario];
+
+                                /* consultas[ultimaConsulta+1].animal->dono = animais[posicaoAnimal].dono;
                                 consultas[ultimaConsulta+1].animal->idade = animais[posicaoAnimal].idade;
                                 consultas[ultimaConsulta+1].animal->nome = animais[posicaoAnimal].nome;
-                                consultas[ultimaConsulta+1].animal->peso = animais[posicaoAnimal].peso;
+                                consultas[ultimaConsulta+1].animal->peso = animais[posicaoAnimal].peso; */
                                 consultas[ultimaConsulta+1].data = dataConsulta;
                                 consultas[ultimaConsulta+1].horario = horaConsulta;
-                                consultas[ultimaConsulta+1].veterinario->CFMV = veterinarios[posicaoVeterinario].CFMV;
-                                consultas[ultimaConsulta+1].veterinario->nome = veterinarios[posicaoVeterinario].nome;
+                                /* consultas[ultimaConsulta+1].veterinario->CFMV = veterinarios[posicaoVeterinario].CFMV;
+                                consultas[ultimaConsulta+1].veterinario->nome = veterinarios[posicaoVeterinario].nome; */
                                 (*qtdConsultas)++;
 
                             } else{
@@ -390,14 +393,12 @@ void main(){
    Veterinario veterinarios[TARRAY] = {};
    Consulta consultas[TARRAY] = {};
    int resp, i = 0;
-   int qtd_Donos = 0, qtd_Animais = 0, qtd_Veterinarios = 0, qtd_Consultas = 0;
-   int *qtdDonos = &qtd_Donos, *qtdAnimais = &qtd_Animais, *qtdVeterinarios = &qtd_Veterinarios, *qtdConsultas = &qtd_Consultas;
-
+   int qtdDonos = 0, qtdAnimais = 0, qtdVeterinarios = 0, qtdConsultas = 0;
 
     do{
         do{
             printf("\n\n**************************************");
-            printf("\t\t\t>>DIGITE A OPÇÃO<<");
+            printf("\n\t>>DIGITE A OPCAO<<");
             printf("\n| Sair......................:\t 0 |");
             printf("\n| Cadastrar dono............:\t 1 |");
             printf("\n| Cadastrar animal..........:\t 2 |");
@@ -407,7 +408,7 @@ void main(){
             printf("\n| Buscar veterinario........:\t 6 |");
             printf("\n| Agendar consulta..........:\t 7 |");
             printf("\n| Visualizar agenda do dia..:\t 8 |");
-            printf("\n| Opção selecionada: ");
+            printf("\n| Opcao selecionada: ");
         } while(0);
         scanf("%d", &resp);
         printf("\n**************************************\n\n");
@@ -416,77 +417,77 @@ void main(){
             break;    
 
             case 1:
-                cadastrarDono(donos, qtdDonos);
+                cadastrarDono(donos, &qtdDonos);
             break;
             
             case 2:
-                cadastrarAnimal(animais, qtdAnimais, donos, qtd_Donos);
+                cadastrarAnimal(animais, &qtdAnimais, donos, qtdDonos);
             break;
 
             case 3:
-                cadastrarVeterinario(veterinarios, qtdVeterinarios);
+                cadastrarVeterinario(veterinarios, &qtdVeterinarios);
             break;
 
-            case 4:
-                char nome_doDono = (char*) calloc(MAXTAM, sizeof(char));
+            case 4:;
+                char *nome_doDono = (char*) calloc(MAXTAM, sizeof(char));
 
                 printf("\n\n>> Buscar Dono << ");
                 printf("\n| Nome: ");
                 scanf(" ");
                 gets(nome_doDono);
 
-                int DonoNoArray = buscarDono(donos, qtd_Donos, nome_doDono);
+                int DonoNoArray = buscarDono(donos, qtdDonos, nome_doDono);
 
                 if(DonoNoArray != -1){
                     printf("\n| Posicao do dono \"%s\" no array: %d", nome_doDono, DonoNoArray);
-                    imprimeDono(donos + DonoNoArray);
+                    imprimeDono(donos[DonoNoArray]);
                     system("PAUSE");
                 } else
                     printf("\n| Dono \"%s\" nao encontrado no array: %d", nome_doDono, DonoNoArray);
             break;    
 
-            case 5:
-                char nome_doAnimal = (char*) calloc(MAXTAM, sizeof(char));
+            case 5:;
+                char *nome_doAnimal = (char*) calloc(MAXTAM, sizeof(char));
 
                 printf("\n\n>> Buscar Animal << ");
                 printf("\n| Nome: ");
                 scanf(" ");
                 gets(nome_doAnimal);
 
-                int AnimalNoArray = buscarAnimal(animais, qtd_Animais, nome_doAnimal);
+                int AnimalNoArray = buscarAnimal(animais, qtdAnimais, nome_doAnimal);
 
                 if(AnimalNoArray != -1){
                     printf("\n| Posicao do animal \"%s\" no array: %d", nome_doAnimal, AnimalNoArray);
-                    imprimeDono(animais + AnimalNoArray);
+                    imprimeAnimal(animais + AnimalNoArray);
                     system("PAUSE");
                 } else
                     printf("\n| Animal \"%s\" nao encontrado no array: %d", nome_doAnimal, AnimalNoArray);
             break;    
 
-            case 6:
-                char nome_doVeterinario = (char*) calloc(MAXTAM, sizeof(char));
+            case 6:;
+                char *nome_doVeterinario = (char*) calloc(MAXTAM, sizeof(char));
 
                 printf("\n\n>> Buscar Veterinario << ");
                 printf("\n| Nome: ");
                 scanf(" ");
                 gets(nome_doVeterinario);
 
-                int VeterinarioNoArray = buscarVeterinario(animais, qtd_Veterinarios, nome_doVeterinario);
+                int VeterinarioNoArray = buscarVeterinario(veterinarios, qtdVeterinarios, nome_doVeterinario);
 
                 if(VeterinarioNoArray != -1){
                     printf("\n| Posicao do veterinario \"%s\" no array: %d", nome_doVeterinario, VeterinarioNoArray);
-                    imprimeDono(veterinarios + VeterinarioNoArray);
+                    imprimeVeterinario(veterinarios + VeterinarioNoArray);
                     system("PAUSE");
                 } else
                     printf("\n| Veterinario \"%s\" nao encontrado no array: %d", nome_doVeterinario, VeterinarioNoArray);
             break;    
 
             case 7:
-                agendarConsulta(consultas, qtdConsultas, animais, veterinarios, qtd_Animais, qtd_Veterinarios);
+                agendarConsulta(consultas, &qtdConsultas, animais, veterinarios, qtdAnimais, qtdVeterinarios);
             break;    
 
             case 8:
-                visualizarAgenda(consultas, qtd_Consultas, animais);
+                visualizarAgenda(consultas, qtdConsultas, animais);
                 printf("\n*****************************");
                 system("PAUSE");
             break;    
