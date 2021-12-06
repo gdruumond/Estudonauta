@@ -8,20 +8,6 @@
 #define MAXTAM 50
 #define TARRAY 10
 
-void imprimeDono(Dono*);
-void imprimeVeterinario(Veterinario*);
-void imprimeAnimal(Animal*);
-int buscarDono(Dono[], int, char*);
-int buscarAnimal(Animal[], int, char*);
-int buscarVeterinario(Veterinario[], int, char*);
-void cadastrarDono(Dono[], int*);
-void cadastrarVeterinario(Veterinario[], int*);
-void cadastrarAnimal(Animal[], int*, Dono[], int);
-int horarioDisponivel(Consulta[], int, char*, int, int);
-void agendarConsulta(Consulta[], int*, Animal[], Veterinario[], int, int);
-void visualizarAgenda(Consulta[], int, Animal[]);
-void main();
-
     // Inicio Questão 01
 typedef struct{
     char *nome;
@@ -47,6 +33,20 @@ typedef struct{
     Veterinario *veterinario;
 } Consulta; // Fim Questão 01
     
+void imprimeDono(Dono*);
+void imprimeVeterinario(Veterinario*);
+void imprimeAnimal(Animal*);
+int buscarDono(Dono[], int, char*);
+int buscarAnimal(Animal[], int, char*);
+int buscarVeterinario(Veterinario[], int, char*);
+void cadastrarDono(Dono[], int*);
+void cadastrarVeterinario(Veterinario[], int*);
+void cadastrarAnimal(Animal[], int*, Dono[], int);
+int horarioDisponivel(Consulta[], int, char*, int, int);
+void agendarConsulta(Consulta[], int*, Animal[], Veterinario[], int, int);
+void visualizarAgenda(Consulta[], int, Animal[]);
+void main();
+
     // Inicio Questão 02
 void imprimeDono(Dono *dono){
     printf("\n\n\t>> Dados do Dono <<");
@@ -205,7 +205,7 @@ void cadastrarAnimal(Animal animais[], int *qtdAnimais, Dono donos[], int qtdDon
                 printf("\n| Idade: ");
                 scanf("%d", &animais[ultimo+1].idade);
                 printf("\n| Peso: ");
-                scanf("%d", &animais[ultimo+1].peso);
+                scanf("%f", &animais[ultimo+1].peso);
                 printf("\n| Nome do dono: ");
                 scanf(" ");
                 gets(animais[ultimo+1].dono->nome);
