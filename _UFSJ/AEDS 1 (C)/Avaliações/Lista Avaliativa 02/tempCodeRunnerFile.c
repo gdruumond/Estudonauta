@@ -1,1 +1,1 @@
-qtdDonos
+Sair
