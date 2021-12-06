@@ -145,7 +145,6 @@ void cadastrarVeterinario(Veterinario veterinarios[], int *qtdVeterinarios){
 void cadastrarAnimal(Animal animais[], int *qtdAnimais, Dono donos[], int qtdDonos){
     int resp = 0, encontrado = 0;
     char *nome_doDono = (char*)calloc(MAXTAM, sizeof(char));
-    animais[*qtdAnimais].dono->nome = (char*)calloc(MAXTAM, sizeof(char));
 
     do{
         if(*qtdAnimais != TARRAY){
@@ -153,10 +152,10 @@ void cadastrarAnimal(Animal animais[], int *qtdAnimais, Dono donos[], int qtdDon
             printf("\n| Nome do dono: ");
             fflush(stdin);
             gets(nome_doDono);
-
             encontrado = buscarDono(donos, qtdDonos, nome_doDono);
 
             if(encontrado != -1){
+                animais[*qtdAnimais].dono->nome = (char*)calloc(MAXTAM, sizeof(char));
                 animais[*qtdAnimais].nome = (char*) calloc(MAXTAM, sizeof(char));
                 strcpy(animais[*qtdAnimais].dono->nome, nome_doDono);
 
@@ -258,6 +257,11 @@ void agendarConsulta(Consulta consultas[], int *qtdConsultas, Animal animais[], 
         horaVaga = horarioDisponivel(consultas, qtdConsultas, dataConsulta, horaConsulta, 0);
         if(horaVaga){
             printf("\n\n\t >> Consulta marcada! <<");
+/*             consultas[*qtdConsultas].animal->dono->nome = (char*)calloc(MAXTAM, sizeof(char));
+            consultas[*qtdConsultas].animal->nome = (char*)calloc(MAXTAM, sizeof(char));
+            consultas[*qtdConsultas].veterinario->nome = (char*)calloc(MAXTAM, sizeof(char));
+            consultas[*qtdConsultas].data = (char*)calloc(MAXTAM, sizeof(char)); */
+
             consultas[*qtdConsultas].animal = &animais[qtdAnimais];
             consultas[*qtdConsultas].veterinario = &veterinarios[qtdVeterinarios];
             consultas[*qtdConsultas].data = dataConsulta;
@@ -285,12 +289,12 @@ void visualizarAgenda(Consulta consultas[], int qtdConsultas, Animal animais[]){
     gets(data_Agenda);
 
     for(int i=0; i<qtdConsultas; i++)
-        if(consultas[i].data == data_Agenda){
+        if(strcmp(consultas[i].data, data_Agenda) == 0){
             printf("\n\n*****************************");
             printf("\n| Data.........:\t\t%s", consultas[i].data);
             printf("\n| Hora.........:\t\t%d", consultas[i].horario);
-            printf("\n| Veterinario..:\t\t%s", consultas[i].veterinario->nome);
             printf("\n| Animal.......:\t\t%s", consultas[i].animal->nome);
+            printf("\n| Veterinario..:\t\t%s", consultas[i].veterinario->nome);
             printf("\n| Dono.........:\t\t%s", consultas[i].animal->dono->nome);
 
             achou++;
