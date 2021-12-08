@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define TMAX 20
-#define qtdP 3
+#define qtdProdutos 3
 
 typedef struct{
     char nome[TMAX];
@@ -17,12 +17,12 @@ typedef struct{
 } Produto;
 
 int main(){
-    Produto produtos[qtdP] = {};
-    Marca marcas[qtdP] = {};
+    Produto produtos[qtdProdutos] = {};
+    Marca marcas[qtdProdutos] = {};
     int qtdMarcas = 0, naoencontrou=1;
     float precoTot = 0;
 
-    for(int i=0; i<qtdP; i++){
+    for(int i=0; i<qtdProdutos; i++){
         printf("\n>> Produto %d: ", i+1);
         printf("\n\tNome: ");
         scanf(" %s", produtos[i].nome);
@@ -61,7 +61,7 @@ int main(){
     for(int i=0; i<qtdMarcas;i++){
         printf("\nMarca %d\n\tNome: %s \n\tProdutos: %d\n\tMedia preco: %.2f", i+1, marcas[i].nome, marcas[i].contador, (marcas[i].precoTot/marcas[i].contador));
     }
-    printf("\n\nMedia total: %.2f\n\n", (precoTot/qtdP));
+    printf("\n\nMedia total: %.2f\n\n", (precoTot/qtdProdutos));
 
     return 0;
 }
