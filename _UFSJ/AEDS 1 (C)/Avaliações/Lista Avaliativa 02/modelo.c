@@ -41,7 +41,7 @@ int buscarVeterinario(Veterinario[], int, char*);
 void cadastrarDono(Dono[], int*);
 void cadastrarVeterinario(Veterinario[], int*);
 void cadastrarAnimal(Animal[], int*, Dono[], int);
-int horarioDisponivel(Consulta[], int*, char*, int, int);
+int horarioDisponivel(Consulta[], int, char*, int);
 void agendarConsulta(Consulta[], int*, Animal[], Veterinario[], int, int);
 void visualizarAgenda(Consulta[], int, Animal[]);
 int main();
@@ -188,34 +188,40 @@ void cadastrarAnimal(Animal animais[], int *qtdAnimais, Dono donos[], int qtdDon
     } else printf("\n\t>> Limite de animais atingido <<");
 }   // Fim Questão 05
 
-/* 
-    // Inicio Questão 06
-int horarioDisponivel(Consulta consultas[], int *qtdConsultas, char *data, int horario, int i){
 
-    if(strcmp(consultas[i].data, data) == 0 && consultas[i].horario == horario)
+    // Inicio Questão 06
+int horarioDisponivel(Consulta consultas[], int qtdConsultas, char *data, int horario){
+
+    if(qtdConsultas < 0)
+        return 1; 
+
+  printf("\n\n\nQuantidade de consultas: %d\nData ja marcada: %s -> %d\nData desejada: %s -> %d\n\n", qtdConsultas, consultas[qtdConsultas].data, consultas[qtdConsultas].horario, data, horario);
+
+    if(strcmp(consultas[qtdConsultas].data, data) == 0 && consultas[qtdConsultas].horario == horario)
         return 0;  
 
-    if(i == *qtdConsultas)
-        return 1; 
-    
-    return horarioDisponivel(consultas, qtdConsultas, data, horario, i+1);
+    return horarioDisponivel(consultas, qtdConsultas-1, data, horario);
 }   // Fim Questão 06
-*/
 
+/*
 // Inicio Questão 06
-int horarioDisponivel(Consulta consultas[], int *qtdConsultas, char *data, int horario, int i){
+int horarioDisponivel(Consulta consultas[], int qtdConsultas, char *data, int horario){
     int j;
 
-    for(j=0; j<*qtdConsultas;j++)
+    for(j=0; j>0;j++){
+        //printf("\n\n\nQuantidade de consultas: %d\nData ja marcada: %s -> %d\nData desejada: %s -> %d\n\n", qtdConsultas, consultas[j].data, consultas[j].horario, data, horario);
         if(strcmp(consultas[j].data, data) == 0 && consultas[j].horario == horario)
             return 0; 
+    }
     
     return 1;
 } // Fim Questão 06
+*/
 
      // Inicio Questão 07
 void agendarConsulta(Consulta consultas[], int *qtdConsultas, Animal animais[], Veterinario veterinarios[], int qtdAnimais, int qtdVeterinarios){
     int horaConsulta, horaVaga, posVet, posAni, resp = 0;
+    char *dataConsulta = (char*)calloc(MAXTAM, sizeof(char));
     
     printf("\n\t>> Agendar Consulta <<");
     if(*qtdConsultas != TARRAY){
@@ -263,15 +269,13 @@ void agendarConsulta(Consulta consultas[], int *qtdConsultas, Animal animais[], 
     } while(resp != 0);
 
     do{
-        char *dataConsulta = (char*)calloc(MAXTAM, sizeof(char));
         resp = 0;
         printf("| Data: ");
         fflush(stdin);
         gets(dataConsulta);
         printf("| Hora: ");
         scanf("%d", &horaConsulta);
-        horaVaga = horarioDisponivel(consultas, qtdConsultas, dataConsulta, horaConsulta, 0);
-
+        horaVaga = horarioDisponivel(consultas, (*qtdConsultas)-1, dataConsulta, horaConsulta);
         if(horaVaga){
             printf("\n\n\t >> Consulta marcada! <<");
             consultas[*qtdConsultas].data = (char*)calloc(MAXTAM, sizeof(char));
@@ -280,11 +284,8 @@ void agendarConsulta(Consulta consultas[], int *qtdConsultas, Animal animais[], 
             consultas[*qtdConsultas].data = dataConsulta;
             consultas[*qtdConsultas].horario = horaConsulta;
             (*qtdConsultas)++;
-            free(dataConsulta);
-            dataConsulta = NULL;
+
         } else{
-            free(dataConsulta);
-            dataConsulta = NULL;
             printf("\n\n\t >> Horario indisponivel <<");
             printf("\n| Buscar novo horario..:\t1 |");
             printf("\n| Sair.................:\t0 |");
