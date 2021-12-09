@@ -195,28 +195,11 @@ int horarioDisponivel(Consulta consultas[], int qtdConsultas, char *data, int ho
     if(qtdConsultas < 0)
         return 1; 
 
-  printf("\n\n\nQuantidade de consultas: %d\nData ja marcada: %s -> %d\nData desejada: %s -> %d\n\n", qtdConsultas, consultas[qtdConsultas].data, consultas[qtdConsultas].horario, data, horario);
-
     if(strcmp(consultas[qtdConsultas].data, data) == 0 && consultas[qtdConsultas].horario == horario)
         return 0;  
 
     return horarioDisponivel(consultas, qtdConsultas-1, data, horario);
 }   // Fim Questão 06
-
-/*
-// Inicio Questão 06
-int horarioDisponivel(Consulta consultas[], int qtdConsultas, char *data, int horario){
-    int j;
-
-    for(j=0; j>0;j++){
-        //printf("\n\n\nQuantidade de consultas: %d\nData ja marcada: %s -> %d\nData desejada: %s -> %d\n\n", qtdConsultas, consultas[j].data, consultas[j].horario, data, horario);
-        if(strcmp(consultas[j].data, data) == 0 && consultas[j].horario == horario)
-            return 0; 
-    }
-    
-    return 1;
-} // Fim Questão 06
-*/
 
      // Inicio Questão 07
 void agendarConsulta(Consulta consultas[], int *qtdConsultas, Animal animais[], Veterinario veterinarios[], int qtdAnimais, int qtdVeterinarios){
@@ -307,12 +290,12 @@ void visualizarAgenda(Consulta consultas[], int qtdConsultas, Animal animais[]){
 
     for(int i=0; i<qtdConsultas; i++)
         if(strcmp(consultas[i].data, data_Agenda) == 0){
-            printf("\n\n**************************************");
-            printf("\n| Data.........:\t%s", consultas[i].data);
-            printf("\n| Hora.........:\t%d", consultas[i].horario);
-            printf("\n| Animal.......:\t%s", consultas[i].animal->nome);
-            printf("\n| Veterinario..:\t%s", consultas[i].veterinario->nome);
-            printf("\n| Dono.........:\t%s", consultas[i].animal->dono->nome);
+            printf("\n\n************************************");
+            printf("\n| Data.........:\t%10s |", consultas[i].data);
+            printf("\n| Hora.........:\t%10d |", consultas[i].horario);
+            printf("\n| Animal.......:\t%10s |", consultas[i].animal->nome);
+            printf("\n| Veterinario..:\t%10s |", consultas[i].veterinario->nome);
+            printf("\n| Dono.........:\t%10s |", consultas[i].animal->dono->nome);
             achou++;
         }
 
@@ -333,7 +316,7 @@ int main(){
    char *nome_doDono, *nome_doVeterinario, *nome_doAnimal;
 
     do{
-        printf("\n\n**************************************");
+        printf("\n\n************************************");
         printf("\n\t>> DIGITE A OPCAO <<");
         printf("\n| Sair......................:\t 0 |");
         printf("\n| Cadastrar dono............:\t 1 |");
@@ -346,7 +329,7 @@ int main(){
         printf("\n| Visualizar agenda do dia..:\t 8 |");
         printf("\n| Opcao selecionada: ");
         scanf("%d", &resp);
-        printf("\n**************************************\n\n");
+        printf("\n************************************\n\n");
         switch (resp){
             case 0:
             break;    
@@ -435,7 +418,7 @@ int main(){
 
             case 8:
                 visualizarAgenda(consultas, qtdConsultas, animais);
-                printf("\n**************************************");
+                printf("\n************************************");
                 printf("\n");
                 system("PAUSE");
             break;    
