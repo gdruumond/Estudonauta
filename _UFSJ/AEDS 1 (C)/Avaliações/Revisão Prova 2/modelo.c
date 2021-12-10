@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define MAXTAM 20
+#define MAXTAM 50
 #define TAMRRAY 3
 
 // 01.
@@ -17,23 +17,23 @@ void cadastraElemento(Elemento *elemento){
     elemento->simbolo = (char*)calloc(MAXTAM, sizeof(char));
     printf("\nDigite os dado do elemento: ");
     printf("\n\tNome: ");
-    fflush(stdin);
-    gets(elemento->nome);
+    scanf(" %s", elemento->nome);
     printf("\tSimbolo: ");
-    fflush(stdin);
-    gets(elemento->simbolo);
+    scanf(" %s", elemento->simbolo);
     printf("\tNumero: ");
     scanf("%d", &elemento->numero);
 }
 
 // 03.
 void imprimeElementos(Elemento elemento[], int qtdElementos){
-    for(int i =0; i<qtdElementos; i++){
-        printf("\n\nElemento %d", i+1);
-        printf("\n\tNome: %s", elemento[i].nome);
-        printf("\n\tSimbolo: %s", elemento[i].simbolo);
-        printf("\n\tNumero: %d", elemento[i].numero);
-    }
+    if(qtdElementos < 0) return;
+
+    printf("\n\nElemento %d", qtdElementos+1);
+    printf("\n\tNome: %s", elemento[qtdElementos].nome);
+    printf("\n\tSimbolo: %s", elemento[qtdElementos].simbolo);
+    printf("\n\tNumero: %d", elemento[qtdElementos].numero);
+
+    return imprimeElementos(elemento, qtdElementos-1);
 }
 
 // 04.
@@ -44,13 +44,13 @@ int elementoNoArray(Elemento elemento[], int qtdElementos, char *nome){
 
     return 0; 
 }
+
  // 05.
 char* stringElementoComposto(Elemento elemento[], int qtdElementos[], int tamVetores){
     char *string = (char*)calloc(MAXTAM, sizeof(char));
-
+    strcpy(string, "\0");
     for(int i=0; i<tamVetores;i++)
-        sprintf(string, "%s%d", elemento[i].simbolo, qtdElementos[i]);
-    strcat(string, "\0");
+        sprintf(string, "%s%s%d", string, elemento[i].simbolo, qtdElementos[i]);
 
     return string;
 }
@@ -58,7 +58,7 @@ char* stringElementoComposto(Elemento elemento[], int qtdElementos[], int tamVet
 // 06.
 void main(){
     Elemento elemento[TAMRRAY];
-    char *strElementos, *nomeElemento = (char*) calloc(MAXTAM, sizeof(char));
+    char *nomeElemento = (char*) calloc(MAXTAM, sizeof(char));
     int qtdDoElemento[TAMRRAY], qtdElementos = 0;
 
 
@@ -67,7 +67,7 @@ void main(){
         qtdElementos++;
     }
     
-    imprimeElementos(elemento, qtdElementos);
+    imprimeElementos(elemento, qtdElementos-1);
     
     printf("\n\n");
     for(int i=0; i<TAMRRAY;i++){
@@ -75,9 +75,7 @@ void main(){
         scanf("%d", &qtdDoElemento[i]);
     }
 
-    strElementos = stringElementoComposto(elemento, qtdDoElemento, TAMRRAY);
-
-    printf("\nElemento formado: %s", strElementos);
+    printf("\nElemento formado: %s", stringElementoComposto(elemento, qtdDoElemento, TAMRRAY));
 
     printf("\n\nInforme o nome de um elemento: ");
     scanf(" %s", nomeElemento);
